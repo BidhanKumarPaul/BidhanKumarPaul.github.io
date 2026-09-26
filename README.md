@@ -61,7 +61,7 @@ BidhanKumarPaul.github.io/
 <div align="center">
 
 [![Gmail](https://img.shields.io/badge/Email-bidhankumar331%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bidhankumar331@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Bidhan%20Kumar%20Pal-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/bidhan-kumar-420a3324b)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Bidhan%20Kumar%20Pal-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bidhan-kumar-paul-420a3324b?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 [![GitHub](https://img.shields.io/badge/GitHub-BidhanKumarPaul-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/BidhanKumarPaul)
 
 </div>
