@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👋 Hi, I'm Bidhan Kumar Pal
+# 👋 Hi, I'm Bidhan Kumar Paul
 
 ### 🌐 [bidhankumarpaul.github.io](https://bidhankumarpaul.github.io/)
 
