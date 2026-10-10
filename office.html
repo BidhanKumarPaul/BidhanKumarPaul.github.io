@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BKPIT — 3D Office | Bidhan Kumar Paul</title>
+<meta name="description" content="Walk through the BKPIT 3D office: projects, skills, GitHub, YouTube, blog and contact of Bidhan Kumar Paul.">
+<meta name="theme-color" content="#05060d">
+<meta property="og:title" content="BKPIT — 3D Office"><meta property="og:description" content="A scroll-through 3D tech office portfolio by Bidhan Kumar Paul."><meta property="og:image" content="https://bidhankumarpaul.github.io/assets/img/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/img/logo-192.png">
+<style>
+:root{--bg:#05060d;--card:rgba(10,13,28,.66);--text:#e8ecf4;--mut:#9aa5bb;--a:#7c5cff;--b:#22d3ee;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(1200px 700px at 70% 0,#1a1440,var(--bg));color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.grad{background:linear-gradient(120deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+body.nogl #gl{display:none}
+#ld{position:fixed;inset:0;z-index:200;background:var(--bg);display:grid;place-items:center;text-align:center;transition:opacity .8s}
+#ld.off{opacity:0;pointer-events:none}
+#ld i{display:block;width:46px;height:46px;border-radius:50%;border:4px solid #1e2638;border-top-color:var(--b);margin:0 auto 14px;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+#top{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 4vw 10px;background:linear-gradient(#05060dcc,transparent)}
+#top a.lg{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px}
+#top a.lg img{width:30px;height:30px;border-radius:22%}
+.tb{display:flex;gap:8px;align-items:center}
+.pill{border:1px solid var(--line);background:rgba(10,13,28,.7);backdrop-filter:blur(10px);color:var(--text);border-radius:99px;padding:6px 13px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+#hud{position:fixed;left:4vw;top:calc(58px + env(safe-area-inset-top,0px));z-index:50;font-size:13px;font-weight:700;color:var(--b);letter-spacing:.04em;text-transform:uppercase;text-shadow:0 0 12px #000}
+#dots{position:fixed;right:10px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:4px}
+#dots button{width:22px;height:22px;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+#dots button:after{content:"";width:9px;height:9px;border-radius:50%;background:#ffffff55;transition:.3s}
+#dots button.on:after{background:var(--b);box-shadow:0 0 12px var(--b);transform:scale(1.5)}
+main{position:relative;z-index:10}
+.sec{min-height:115vh;padding:15vh 5vw 8vh}
+.pn{max-width:540px;background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 30px 80px -30px #000}
+.sec.R .pn{margin-left:auto}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--b);margin-bottom:8px}
+h1{font-size:clamp(36px,6vw,58px);line-height:1.05;margin:6px 0 12px}
+h2{font-size:clamp(26px,4vw,36px);line-height:1.15;margin-bottom:10px}
+h3{font-size:17px}
+.mu{color:var(--mut);font-size:14px}
+p+p{margin-top:10px}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-block;padding:11px 20px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);cursor:pointer;font-family:inherit;transition:.25s}
+.btn:hover{transform:translateY(-3px)}
+.btn.p{background:linear-gradient(120deg,var(--a),var(--b));border:0;color:#fff}
+.btn.s{padding:8px 14px;font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.chips span{font-size:12px;padding:3px 11px;border-radius:99px;border:1px solid var(--line);color:var(--mut)}
+.chips span.vc,.vc{background:linear-gradient(120deg,var(--a),var(--b));color:#fff!important;border:0!important}
+.sk{margin-top:12px}.sk div{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px}
+.bar{height:7px;background:#ffffff1a;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--a),var(--b))}
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.st div{text-align:center;background:#ffffff0d;border-radius:12px;padding:10px 4px}.st b{display:block;font-size:22px}.st small{font-size:11px;color:var(--mut)}
+.it{display:block;border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin-top:10px;background:#ffffff08;transition:.25s}
+a.it:hover{border-color:var(--a);transform:translateX(4px)}
+.vd img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;margin-bottom:8px}
+.tl{border-left:2px solid var(--line);padding-left:16px;margin-top:14px}.tl p{margin:0 0 10px;font-size:13px}.tl b{color:var(--b);font-size:12px;display:block}
+form{display:grid;gap:10px;margin-top:14px}
+input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#ffffff0d;color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--a);border-color:transparent}
+.hint{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:40;font-size:12px;color:var(--mut);background:rgba(10,13,28,.7);padding:6px 14px;border-radius:99px;transition:opacity .5s;pointer-events:none}
+#nogl{display:none;position:fixed;bottom:10px;left:10px;right:10px;z-index:60;background:#1c1230;border:1px solid var(--a);border-radius:12px;padding:10px 14px;font-size:13px}
+body.nogl #nogl{display:block}
+footer{position:relative;z-index:10;text-align:center;color:var(--mut);padding:30px 5vw 40px;font-size:13px}
+@media(max-width:800px){.sec{padding:44vh 4vw 6vh}.pn{max-width:none;padding:22px}.sec.R .pn{margin-left:0}.st{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:800px){.hint{display:none}}
+</style>
+</head>
+<body>
+<div id="ld"><div><i></i><b class="grad">Entering BKPIT…</b><p class="mu">Loading the 3D office</p></div></div>
+<canvas id="gl"></canvas>
+<div id="nogl">3D could not start on this device, so you're seeing the simple version. <a href="index.html" style="color:var(--b)">Open the classic site →</a></div>
+
+<header id="top">
+ <a class="lg" href="#r0"><img src="assets/img/logo-192.png" alt="BKPIT logo" onerror="this.remove()"><span class="grad">BKPIT</span></a>
+ <div class="tb"><button class="pill" id="qb" aria-label="Quality">⚙ Auto</button><a class="pill" href="index.html">Classic site</a></div>
+</header>
+<div id="hud">📍 Lobby</div>
+<nav id="dots" aria-label="Rooms"></nav>
+<div class="hint" id="hint">Scroll to walk through the office ↓</div>
+
+<main>
+<!-- 0 LOBBY -->
+<section class="sec" id="r0"><div class="pn">
+ <span class="tag">🏢 Welcome to BKPIT</span>
+ <h1>Hi, I'm <span class="grad">Bidhan Kumar Paul</span></h1>
+ <p class="mu" style="font-size:17px">I'm a <b id="tw" style="color:var(--b)"></b><span style="border-right:2px solid var(--b)"></span></p>
+ <p>Applied Mathematics student at the University of Rajshahi and founder of BKPIT, who builds software with Python and AI tools. Open to remote internships, graduate roles, ML research and freelance projects worldwide. Come in and look around.</p>
+ <div class="row"><a class="btn p" href="#r1">Start the tour ↓</a><a class="btn" href="https://drive.google.com/uc?export=download&id=13MXcbPRQ5-2WretJyIDhQWt3vC47AG7S" target="_blank" rel="noopener">⬇ Download CV</a></div>
+ <div class="row" style="margin-top:12px">
+  <a class="btn s" href="https://github.com/BidhanKumarPaul" target="_blank" rel="noopener">GitHub</a>
+  <a class="btn s" href="https://www.linkedin.com/in/bidhan-kumar-paul-420a3324b" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="btn s" href="https://www.youtube.com/@bkpit" target="_blank" rel="noopener">YouTube</a>
+  <a class="btn s" href="https://www.facebook.com/share/1EvQ5ixkCx/" target="_blank" rel="noopener">Facebook</a>
+  <a class="btn s" href="https://www.instagram.com/mongol_moni" target="_blank" rel="noopener">Instagram</a>
+ </div>
+</div></section>
+
+<!-- 1 DEV ROOM -->
+<section class="sec" id="r1"><div class="pn">
+ <span class="tag">💻 Dev Room</span>
+ <h2>About & <span class="grad">skills</span></h2>
+ <p>Self-taught programmer since 2020 and an aspiring machine learning researcher. As founder of BKPIT, I use programming and an entrepreneurial mindset to help businesses grow online, with HTML, CSS and JavaScript on the front end and Python on the back end.</p>
+ <div id="sk"></div>
+ <div class="chips"><span>📍 Rajshahi, Bangladesh</span><span>🎓 B.Sc. in Applied Mathematics</span><span>🌍 Open to remote work</span></div>
+</div></section>
+
+<!-- 2 SERVER ROOM -->
+<section class="sec" id="r2"><div class="pn">
+ <span class="tag">🖥️ Server Room</span>
+ <h2>GitHub <span class="grad">live</span></h2>
+ <p class="mu">Real-time numbers from github.com/BidhanKumarPaul.</p>
+ <div class="st"><div><b id="g1">10</b><small>Repos</small></div><div><b id="g2">16</b><small>Followers</small></div><div><b id="g3">32</b><small>Following</small></div><div><b id="g4">0</b><small>Stars</small></div></div>
+ <div id="gl2"></div>
+ <h3 style="margin-top:16px">Recently updated</h3>
+ <div id="gr"><a class="it" href="https://github.com/BidhanKumarPaul?tab=repositories" target="_blank" rel="noopener">Open all repositories →</a></div>
+ <div class="row"><a class="btn p" href="https://github.com/BidhanKumarPaul" target="_blank" rel="noopener">Open GitHub profile</a></div>
+</div></section>
+
+<!-- 3 SHOWCASE -->
+<section class="sec" id="r3"><div class="pn">
+ <span class="tag">🖼️ Showcase</span>
+ <h2>Featured <span class="grad">work</span></h2>
+ <div id="fe"></div>
+</div></section>
+
+<!-- 4 STUDIO -->
+<section class="sec" id="r4"><div class="pn">
+ <span class="tag">🎬 Studio</span>
+ <h2>My <span class="grad">channel</span></h2>
+ <p class="mu">Latest videos from BKPIT on YouTube.</p>
+ <div id="yt"><a class="it" href="https://www.youtube.com/@bkpit" target="_blank" rel="noopener">▶ Watch on YouTube</a></div>
+ <div class="row"><a class="btn p" href="https://www.youtube.com/@bkpit?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a><a class="btn" href="https://www.youtube.com/@bkpit" target="_blank" rel="noopener">Visit channel</a></div>
+</div></section>
+
+<!-- 5 LIBRARY -->
+<section class="sec" id="r5"><div class="pn">
+ <span class="tag">📚 Library</span>
+ <h2>BKP <span class="grad">Writes</span></h2>
+ <p class="mu">Notes on math, code and learning in public.</p>
+ <div id="bl"><a class="it" href="blog.html">Read the blog →</a></div>
+ <div class="row"><a class="btn p" href="blog.html">Visit BKP Writes →</a></div>
+ <h3 style="margin-top:20px">My journey</h3>
+ <div class="tl">
+  <p><b>2026 – 2030</b>B.Sc. in Applied Mathematics, University of Rajshahi</p>
+  <p><b>2021 – 2023</b>Manager, Learn with Ratan (YouTube: uploads, editing, SEO)</p>
+  <p><b>2023 – 2025</b>HSC, Govt. Shah Sultan College, Bogura</p>
+  <p><b>2018 – 2023</b>SSC, Mahishaban High School, Bogura</p>
+ </div>
+</div></section>
+
+<!-- 6 MEETING ROOM -->
+<section class="sec" id="r6"><div class="pn">
+ <span class="tag">🤝 Meeting Room</span>
+ <h2>Let's <span class="grad">talk</span></h2>
+ <p class="mu">Have a project or idea? Send a message and I'll reply when I'm free.</p>
+ <form id="cf">
+  <input id="n" placeholder="Your name" required><input id="e" type="email" placeholder="Your email" required>
+  <input id="s" placeholder="Subject" required><textarea id="m" rows="4" placeholder="Message" required></textarea>
+  <button class="btn p" type="submit">Send message</button><p id="fs" class="mu" aria-live="polite"></p>
+ </form>
+ <div class="row"><a class="btn s" href="mailto:bidhankumar331@gmail.com">✉ bidhankumar331@gmail.com</a><a class="btn s" href="https://drive.google.com/file/d/13MXcbPRQ5-2WretJyIDhQWt3vC47AG7S/view" target="_blank" rel="noopener">View CV</a></div>
+</div></section>
+</main>
+<footer>© <span id="y"></span> BKPIT. All rights reserved.<br><b class="grad">Developed by BKPIT</b></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="posts.js" onerror="void 0"></script>
+<script>
+const $=s=>document.querySelector(s);
+$('#y').textContent=new Date().getFullYear();
+const ROOMS=[['Lobby',0x7c5cff],['Dev Room',0x22d3ee],['Server Room',0x22c55e],['Showcase',0xf472b6],['Studio',0xff3b3b],['Library',0xf59e0b],['Meeting Room',0x7c5cff]];
+const S=[-1,1,-1,1,-1,1,-1],N=ROOMS.length,GAP=26;
+// ---------- quality ----------
+let qs='auto';try{qs=localStorage.getItem('q')||'auto'}catch(e){}
+const weak=(navigator.hardwareConcurrency||4)<=4||(navigator.deviceMemory||4)<=3||innerWidth<700;
+const LOW=qs==='low'||(qs==='auto'&&weak),HIGH=qs==='high';
+$('#qb').textContent='⚙ '+({auto:'Auto',low:'Light',high:'Max'})[qs];
+$('#qb').onclick=()=>{try{localStorage.setItem('q',{auto:'low',low:'high',high:'auto'}[qs])}catch(e){}location.reload()};
+// ---------- typewriter ----------
+const W=['Python Programmer','Applied Mathematics Student','Aspiring ML Researcher','Founder of BKPIT'];let wi=0,ci=0,del=false;
+(function tick(){const w=W[wi];ci+=del?-1:1;$('#tw').textContent=w.slice(0,ci);let d=del?35:80;if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;wi=(wi+1)%W.length;d=300}setTimeout(tick,d)})();
+// ---------- sections, dots, scroll mapping ----------
+const secs=[...document.querySelectorAll('.sec')];secs.forEach((s,i)=>s.classList.add(i%2?'L':'R'));
+let tops=[];const meas=()=>{tops=secs.map(s=>s.offsetTop)};meas();
+const dots=$('#dots');ROOMS.forEach((r,i)=>{const b=document.createElement('button');b.title=r[0];b.setAttribute('aria-label',r[0]);b.onclick=()=>scrollTo({top:Math.max(0,tops[i]-innerHeight*.25)});dots.appendChild(b)});
+function prog(){if(!tops.length)return 0;const y=scrollY+innerHeight*.3;let i=0;while(i<N-1&&y>=tops[i+1])i++;const f=i>=N-1?0:Math.min(1,Math.max(0,(y-tops[i])/(tops[i+1]-tops[i])));return (i+f)/(N-1)}
+let room=-1;function setRoom(u){const i=Math.round(u*(N-1));if(i===room)return;room=i;$('#hud').textContent='📍 '+ROOMS[i][0];[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i))}
+addEventListener('scroll',()=>{$('#hint').style.opacity=scrollY>80?0:1},{passive:true});
+// ---------- live data ----------
+const U='BidhanKumarPaul',esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ago=d=>{const m=(Date.now()-new Date(d))/6e4;return m<60?Math.max(1,~~m)+'m ago':m<1440?~~(m/60)+'h ago':~~(m/1440)+'d ago'};
+const J=u=>{const k='c:'+u;try{const c=JSON.parse(localStorage.getItem(k));if(c&&Date.now()-c.t<18e5)return Promise.resolve(c.d)}catch(e){}return fetch(u).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{try{localStorage.setItem(k,JSON.stringify({t:Date.now(),d}))}catch(e){}return d})};
+// skills
+[['Python',80],['Github',75],['Canva',75],['C++',70],['Video Editing',70],['CSS',40],['HTML',100],['Kotlin'],['TypeScript']].forEach(s=>{$('#sk').insertAdjacentHTML('beforeend',s[1]?`<div class="sk"><div><span>${s[0]}</span><b>${s[1]}%</b></div><div class="bar"><i style="width:${s[1]}%"></i></div></div>`:`<div class="sk"><div><span>${s[0]}</span><b class="vc" style="padding:2px 10px;border-radius:99px;font-size:11px">vibe coded</b></div></div>`)});
+// featured
+const FE=[['MANGAL','Offline-first AI agent with a React web interface and a native Android app. Private, fast, and works without internet.',['TypeScript','Offline-first','Vibe coded'],[['⬇ Download APK','https://github.com/BidhanKumarPaul/MANGAL/releases/latest']]],
+['Ekagrata','Minimalist Android launcher that replaces your home screen with one goal, a focus timer, and a distraction shield. Built with Kotlin.',['Kotlin','Android','MIT','Vibe coded'],[['⬇ Download APK','https://github.com/BidhanKumarPaul/Ekagrata/releases/latest']]],
+['pdf-personal-tutor','Upload your lecture notes as a PDF. Ask questions in plain English and get answers grounded in your material, with page citations.',['Web tool','Python','MIT'],[['🔧 Visit tool','https://pdftutor-bkpit.streamlit.app/']]],
+['APM-Resources-by-BKP','RU-APM is a resource website for Applied Mathematics students at the University of Rajshahi, with notes, books and past year questions.',['Website','JavaScript','MIT'],[['🌐 Visit website','https://bidhankumarpaul.github.io/APM-Resources-by-BKP/']]],
+['BidhanKumarPaul.github.io','My personal portfolio website.',['Website','HTML','MIT'],[['🌐 Visit website','https://bidhankumarpaul.github.io/']]]];
+$('#fe').innerHTML=FE.map(f=>`<div class="it" data-r="${f[0]}"><h3>${f[0]}</h3><p class="mu fd">${esc(f[1])}</p><div class="chips">${f[2].map(c=>`<span${c==='Vibe coded'?' class="vc"':''}>${c}</span>`).join('')}</div><div class="row" style="margin-top:12px"><a class="btn s p" href="https://github.com/BidhanKumarPaul/${f[0]}" target="_blank" rel="noopener">GitHub</a>${f[3].map(b=>`<a class="btn s" href="${b[1]}" target="_blank" rel="noopener">${b[0]}</a>`).join('')}</div></div>`).join('');
+// github
+const LC={Kotlin:'#a97bff',TypeScript:'#3178c6',JavaScript:'#f1e05a',HTML:'#e34c26',Python:'#3572a5',CSS:'#563d7c'};
+function langs(L){const t=Object.values(L).reduce((a,b)=>a+b,0)||1;$('#gl2').innerHTML=Object.entries(L).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k,v])=>`<div class="sk"><div><span>${esc(k)}</span><b>${(v/t*100).toFixed(1)}%</b></div><div class="bar"><i style="width:${v/t*100}%;background:${LC[k]||'#888'}"></i></div></div>`).join('')}
+langs({Kotlin:39.65,TypeScript:31.92,JavaScript:15.69,HTML:7.31,Python:3.22});
+J(`https://api.github.com/users/${U}`).then(u=>{$('#g1').textContent=u.public_repos;$('#g2').textContent=u.followers;$('#g3').textContent=u.following}).catch(()=>{});
+J(`https://api.github.com/users/${U}/repos?per_page=100&sort=updated`).then(d=>{$('#g4').textContent=d.reduce((a,x)=>a+x.stargazers_count,0);
+const L={};d.filter(x=>!x.fork&&x.language).forEach(x=>L[x.language]=(L[x.language]||0)+1);if(Object.keys(L).length)langs(L);
+document.querySelectorAll('#fe .it').forEach(c=>{const x=d.find(y=>y.name===c.dataset.r);if(x&&x.description)c.querySelector('.fd').textContent=x.description});
+const pr=d.filter(x=>!x.fork&&x.name.toLowerCase()!==U.toLowerCase()).sort((a,b)=>new Date(b.pushed_at)-new Date(a.pushed_at)).slice(0,4);
+if(pr.length)$('#gr').innerHTML=pr.map(x=>`<a class="it" href="${esc(x.html_url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b> <span class="mu">· ${esc(x.language||'Code')} · ${ago(x.pushed_at)}</span></a>`).join('')}).catch(()=>{});
+// youtube
+J('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=UC0mrSl-0-uuU_ewaSPb4JpA')).then(d=>{const v=(d.items||[]).slice(0,3);if(!v.length)return;
+$('#yt').innerHTML=v.map(i=>`<a class="it vd" href="${esc(i.link)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(i.thumbnail)}" alt=""><b>${esc(i.title)}</b></a>`).join('')}).catch(()=>{});
+// blog
+if(window.POSTS&&POSTS.length)$('#bl').innerHTML=POSTS.slice(0,3).map(x=>`<a class="it" href="blog.html#/${x.id}"><span class="tag" style="margin:0">${esc(x.tag)}</span><h3>${esc(x.title)}</h3><p class="mu">${esc(x.summary)}</p></a>`).join('');
+// contact form (FormSubmit, no account)
+$('#cf').onsubmit=async e=>{e.preventDefault();const f=$('#fs'),b=e.target.querySelector('button');b.disabled=true;f.textContent='Sending…';
+try{const r=await fetch('https://formsubmit.co/ajax/bidhankumar331@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:$('#n').value,email:$('#e').value,_replyto:$('#e').value,_subject:'Portfolio: '+$('#s').value,message:$('#m').value,_template:'table'})});
+const j=await r.json();if(!r.ok||j.success==='false')throw 0;f.textContent='Thanks! Your message was sent.';e.target.reset()}
+catch(x){f.textContent='Could not send directly, opening your email app…';location.href='mailto:bidhankumar331@gmail.com?subject='+encodeURIComponent($('#s').value)+'&body='+encodeURIComponent($('#m').value+'\n\n— '+$('#n').value+' ('+$('#e').value+')')}b.disabled=false};
+
+// ================= 3D OFFICE =================
+function fail(){document.body.classList.add('nogl');$('#ld').classList.add('off');meas()}
+function start(){
+if(!window.THREE)return fail();
+let R;try{R=new THREE.WebGLRenderer({canvas:$('#gl'),antialias:!LOW,powerPreference:'high-performance'})}catch(e){return fail()}
+let pr=LOW?1:Math.min(devicePixelRatio||1,HIGH?2:1.5);R.setPixelRatio(pr);R.setSize(innerWidth,innerHeight);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x05060d);scene.fog=new THREE.Fog(0x05060d,10,LOW?42:58);
+const cam=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.1,140);
+scene.add(new THREE.HemisphereLight(0x9db4ff,0x1a0f33,1.05));
+const key=new THREE.PointLight(0x7c5cff,1.7,24,2);scene.add(key);
+const anim=[];
+const Lm=(c,e=0,ei=1)=>new THREE.MeshLambertMaterial({color:c,emissive:e,emissiveIntensity:ei});
+const Bm=(c,o)=>new THREE.MeshBasicMaterial(Object.assign({color:c},o||{}));
+const Bx=(w,h,d)=>new THREE.BoxGeometry(w,h,d),Pl=(w,h)=>new THREE.PlaneGeometry(w,h),Cy=(a,b,h,s)=>new THREE.CylinderGeometry(a,b,h,s||10);
+function M(g,m,x,y,z,p){const o=new THREE.Mesh(g,m);o.position.set(x,y,z);(p||scene).add(o);return o}
+function ctex(w,h,fn){const c=document.createElement('canvas');c.width=w;c.height=h;fn(c.getContext('2d'),w,h);return new THREE.CanvasTexture(c)}
+const hex=c=>'#'+c.toString(16).padStart(6,'0');
+const labelT=(t,s,c1,c2)=>ctex(512,300,(x,w,h)=>{const g=x.createLinearGradient(0,0,w,h);g.addColorStop(0,c1);g.addColorStop(1,c2);x.fillStyle=g;x.fillRect(0,0,w,h);x.fillStyle='rgba(0,0,0,.28)';x.fillRect(0,h-84,w,84);x.fillStyle='#fff';x.textAlign='center';x.font='bold 54px Arial';x.fillText(t,w/2,h/2+10);x.font='26px Arial';x.fillText(s,w/2,h-30)});
+const codeT=c=>ctex(256,160,(x,w,h)=>{x.fillStyle='#070a16';x.fillRect(0,0,w,h);for(let i=0;i<11;i++){x.fillStyle=['#7c5cff','#22d3ee','#8b95a9',c][i%4];x.fillRect(12+(i%3)*14,10+i*13,20+Math.random()*(w-90),6)}x.fillStyle=c;x.fillRect(w-16,h-16,7,9)});
+const nameT=(t,c)=>ctex(512,112,(x,w,h)=>{x.fillStyle='rgba(5,6,13,.85)';x.fillRect(0,0,w,h);x.strokeStyle=hex(c);x.lineWidth=5;x.strokeRect(3,3,w-6,h-6);x.fillStyle=hex(c);x.font='bold 54px Arial';x.textAlign='center';x.fillText(t.toUpperCase(),w/2,74)});
+const glowT=ctex(128,128,(x,w,h)=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,'rgba(255,255,255,.9)');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.fillRect(0,0,w,h)});
+const ytT=ctex(640,360,(x,w,h)=>{x.fillStyle='#0b0d18';x.fillRect(0,0,w,h);x.fillStyle='#ff2d2d';x.fillRect(w/2-90,60,180,126);x.fillStyle='#fff';x.beginPath();x.moveTo(w/2-22,90);x.lineTo(w/2-22,156);x.lineTo(w/2+36,123);x.fill();x.font='bold 56px Arial';x.textAlign='center';x.fillText('BKPIT Channel',w/2,262);x.font='26px Arial';x.fillStyle='#8b95a9';x.fillText('youtube.com/@bkpit',w/2,308)});
+const booksT=ctex(512,300,(x,w,h)=>{x.fillStyle='#0b0d18';x.fillRect(0,0,w,h);const cs=['#7c5cff','#22d3ee','#f59e0b','#f472b6','#22c55e','#ef4444','#e8ecf4'];for(let r=0;r<4;r++){let px=6;while(px<w-14){const bw=10+Math.random()*16,bh=50+Math.random()*20;x.fillStyle=cs[Math.random()*7|0];x.fillRect(px,r*74+74-bh,bw,bh);px+=bw+2}x.fillStyle='#2a2f4a';x.fillRect(0,r*74+72,w,4)}});
+const floorT=ctex(128,128,(x,w,h)=>{x.fillStyle='#0a0d1e';x.fillRect(0,0,w,h);x.strokeStyle='rgba(124,92,255,.38)';x.lineWidth=3;x.strokeRect(0,0,w,h)});floorT.wrapS=floorT.wrapT=THREE.RepeatWrapping;floorT.repeat.set(10,46);
+const winT=ctex(64,128,(x,w,h)=>{x.fillStyle='#0a0d1c';x.fillRect(0,0,w,h);for(let a=0;a<8;a++)for(let b=0;b<16;b++)if(Math.random()<.45){x.fillStyle=Math.random()<.5?'#7c5cff':Math.random()<.5?'#22d3ee':'#f5d98b';x.fillRect(a*8+2,b*8+2,4,4)}});winT.wrapS=winT.wrapT=THREE.RepeatWrapping;winT.repeat.set(2,3);
+// shell
+const LEN=GAP*(N-1)+26+13;
+const fl=M(new THREE.PlaneGeometry(20,LEN,1,1),new THREE.MeshLambertMaterial({map:floorT}),0,0,-78);fl.rotation.x=-Math.PI/2;
+const ce=M(Pl(20,LEN),Lm(0x080b18),0,5,-78);ce.rotation.x=Math.PI/2;
+[-10,10].forEach(x=>{M(Bx(.1,5,LEN),Bm(0x7c5cff,{transparent:true,opacity:.07,depthWrite:false}),x,2.5,-78);[.06,4.94].forEach(y=>M(Bx(.12,.12,LEN),Bm(0x7c5cff),x,y,-78))});
+M(Bx(20,5,.3),Lm(0x0a0d1c),0,2.5,13);M(Bx(20,5,.3),Lm(0x0a0d1c),0,2.5,-GAP*(N-1)-13);
+for(let k=0;k<14;k+=LOW?2:1)M(Bx(3,.05,.4),Bm(0xcfd8ff),0,4.95,6-13*k);
+for(let i=0;i<N-1;i++){const z=-GAP*i-13,c=ROOMS[i+1][1];
+ [-6.1,6.1].forEach(x=>M(Bx(7.8,5,.3),Lm(0x0a0d1c),x,2.5,z));M(Bx(4.4,1.3,.3),Lm(0x0a0d1c),0,4.35,z);
+ [-2.2,2.2].forEach(x=>M(Bx(.12,3.7,.34),Bm(c),x,1.85,z));M(Bx(4.5,.12,.34),Bm(c),0,3.7,z);
+ M(Pl(4,.9),Bm(0xffffff,{map:nameT(ROOMS[i+1][0],c),transparent:true}),0,4.35,z+.17)}
+// props
+function plant(x,z,s){s=s||1;M(Cy(.25*s,.2*s,.4*s,8),Lm(0x23283f),x,.2*s,z);const a=M(new THREE.IcosahedronGeometry(.4*s,0),Lm(0x14b86a,0x0a5a35,.6),x,.75*s,z);M(new THREE.IcosahedronGeometry(.28*s,0),Lm(0x22d36f,0x0a5a35,.6),x+.15*s,1.1*s,z+.05);anim.push(t=>{a.rotation.y=t*.3})}
+function desk(x,z,ry,tx,col){const g=new THREE.Group();g.position.set(x,0,z);g.rotation.y=ry;scene.add(g);
+ M(Bx(2.4,.08,1.1),Lm(0x1a2038),0,.78,0,g);[[-1.1,-.45],[1.1,-.45],[-1.1,.45],[1.1,.45]].forEach(p=>M(Bx(.07,.78,.07),Lm(0x0d1020),p[0],.39,p[1],g));
+ M(Bx(2.3,.03,1),Lm(col,col,1),0,.7,0,g);M(Bx(1.1,.65,.05),Lm(0x05060d),0,1.2,-.3,g);M(Pl(1,.55),Bm(0xffffff,{map:tx}),0,1.2,-.27,g);M(Bx(.08,.3,.08),Lm(0x0d1020),0,.95,-.3,g);M(Bx(.7,.02,.25),Lm(0x0d1020),0,.83,.15,g);
+ M(Cy(.3,.3,.08),Lm(0x2a2f4a),0,.5,.95,g);M(Bx(.5,.55,.07),Lm(0x2a2f4a),0,.85,1.22,g);M(Cy(.05,.05,.45,6),Lm(0x0d1020),0,.25,.95,g);return g}
+function wallScreen(x,y,z,ry,w,h,tex,c){const g=new THREE.Group();g.position.set(x,y,z);g.rotation.y=ry;scene.add(g);M(Bx(w+.2,h+.2,.1),Lm(0x0a0d1c,c,1),0,0,-.06,g);M(Pl(w,h),Bm(0xffffff,{map:tex}),0,0,0,g);return g}
+// ---- rooms ----
+const Z=i=>-GAP*i;
+ROOMS.forEach((r,i)=>{const z=Z(i),s=S[i],c=r[1];const gl=M(Pl(14,14),Bm(c,{map:glowT,transparent:true,opacity:.5,depthWrite:false,blending:THREE.AdditiveBlending}),s*4,.03,z-2);gl.rotation.x=-Math.PI/2});
+// 0 LOBBY
+(()=>{const z=Z(0);
+ M(Bx(4,1.1,1.3),Lm(0x151a30),-5.5,.55,z-3);M(Bx(3.8,.08,.05),Lm(0x7c5cff,0x7c5cff,1.4),-5.5,.95,z-2.33);
+ M(Bx(2.6,.5,1),Lm(0x2a2f4a),-6.6,.25,z+3);M(Bx(2.6,.6,.25),Lm(0x2a2f4a),-6.6,.7,z+3.45);M(Bx(.9,.4,.9),Lm(0x1a2038,0x22d3ee,.25),-6.6,.2,z+1.2);
+ plant(-8.6,z+6,1.3);plant(-8.6,z-8,1.3);plant(8.5,z+5,1.1);
+ M(Pl(6,1.5),Bm(0xffffff,{map:ctex(1024,256,(x,w,h)=>{const g=x.createLinearGradient(0,0,w,0);g.addColorStop(0,'#7c5cff');g.addColorStop(1,'#22d3ee');x.fillStyle='rgba(5,6,13,.9)';x.fillRect(0,0,w,h);x.fillStyle=g;x.font='bold 150px Arial';x.textAlign='center';x.fillText('BKPIT',w/2,180)}),transparent:true}),-5.5,3.2,z-3.7);
+ const ico=M(new THREE.IcosahedronGeometry(1.3,1),Bm(0x22d3ee,{wireframe:true}),-3.2,3.1,z-5);
+ const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:ctex(128,128,(x,w,h)=>{x.fillStyle='#4a7cff';x.fillRect(0,0,w,h);x.fillStyle='#fff';x.font='bold 56px Arial';x.textAlign='center';x.fillText('BKP',64,76)}),fog:false}));sp.scale.set(1.3,1.3,1);sp.position.copy(ico.position);scene.add(sp);
+ new THREE.TextureLoader().load('assets/img/logo-192.png',t=>{sp.material.map=t;sp.material.needsUpdate=true},undefined,()=>{});
+ anim.push(t=>{ico.rotation.y=t*.5;ico.rotation.x=t*.3;ico.position.y=3.1+Math.sin(t)*.15;sp.position.y=ico.position.y})})();
+// 1 DEV ROOM
+(()=>{const z=Z(1);[[4,0x7c5cff],[0,0x22d3ee],[-4,0x22c55e]].forEach(p=>desk(5.4,z+p[0],-Math.PI/2,codeT(hex(p[1])),p[1]));
+ desk(-6.5,z+1,Math.PI/2,codeT('#f472b6'),0xf472b6);
+ wallScreen(9.8,2.5,z-9,-Math.PI/2,4,2.2,labelT('Python · C++ · HTML','Kotlin · TypeScript · Git','#16205c','#0e6a86'),0x22d3ee);
+ plant(8.6,z+9,1.2);plant(-8.6,z-8,1.2);M(Cy(.04,.04,2.2,6),Lm(0x0d1020),-8.2,1.1,z+7);M(new THREE.SphereGeometry(.2,10,8),Bm(0xffe9a8),-8.2,2.3,z+7)})();
+// 2 SERVER ROOM
+const leds=[];(()=>{const z=Z(2);for(let k=0;k<5;k++){const zz=z+6-k*2.5;M(Bx(1.1,3.2,1),Lm(0x0b0e1c),-7.8,1.6,zz);M(Bx(.02,3,.9),Lm(0x050610),-7.24,1.6,zz);
+  const n=LOW?4:8;for(let j=0;j<n;j++){const l=M(Bx(.03,.07,.12),Bm(0x22c55e),-7.2,.5+j*.35,zz-.3+(j%3)*.3);leds.push([l,Math.random()*6])}}
+ wallScreen(-9.8,2.5,z-6,Math.PI/2,5,2.8,labelT('GitHub LIVE','github.com/BidhanKumarPaul','#10331f','#0b5e3a'),0x22c55e);
+ const core=M(new THREE.TorusKnotGeometry(.5,.14,LOW?40:80,8),Bm(0x22c55e,{wireframe:true}),-4.2,1.8,z-1);anim.push(t=>{core.rotation.x=t*.6;core.rotation.y=t*.4});
+ plant(8.5,z+8,1.2);anim.push(t=>leds.forEach(a=>{a[0].material.color.setHex(Math.sin(t*3+a[1])>.2?0x22c55e:Math.sin(t*2+a[1])>.5?0xff4d4d:0x0b3b22)}))})();
+// 3 SHOWCASE
+(()=>{const z=Z(3),cols=[['MANGAL','Offline AI agent','#7c5cff','#22d3ee'],['Ekagrata','Focus launcher','#f472b6','#7c5cff'],['PDF Tutor','Ask your notes','#22d3ee','#0e6a86'],['APM Resources','RU-APM website','#f59e0b','#ef4444']];
+ cols.forEach((a,k)=>{const zz=z+7-k*4.6;wallScreen(9.8,2.4,zz,-Math.PI/2,3.4,2,labelT(a[0],a[1],a[2],a[3]),0xf472b6);const ring=M(new THREE.RingGeometry(.8,1,24),Bm(0xf472b6,{side:THREE.DoubleSide}),8.4,.04,zz);ring.rotation.x=-Math.PI/2});
+ wallScreen(-9.8,2.4,z-6,Math.PI/2,3.4,2,labelT('Portfolio','bidhankumarpaul.github.io','#0f3b6e','#7c5cff'),0x7c5cff);
+ const ph=M(Bx(.8,1.5,.08),Lm(0x0a0d1c,0xf472b6,.6),4.6,1.6,z);M(Pl(.7,1.35),Bm(0xffffff,{map:labelT('MANGAL','Under development','#7c5cff','#22d3ee')}),0,0,.05,ph);
+ M(Cy(.6,.7,.9,16),Lm(0x151a30,0xf472b6,.5),4.6,.45,z);anim.push(t=>{ph.rotation.y=t*.7;ph.position.y=1.7+Math.sin(t*1.2)*.1});plant(-8.5,z+8,1.2)})();
+// 4 STUDIO
+(()=>{const z=Z(4);
+ wallScreen(-9.8,2.5,z-1,Math.PI/2,6,3.4,ytT,0xff3b3b);
+ const tp=new THREE.Group();tp.position.set(-4.6,0,z+3);scene.add(tp);[0,1,2].forEach(k=>{const l=M(Cy(.025,.025,1.5,5),Lm(0x0d1020),Math.cos(k*2.09)*.4,.7,Math.sin(k*2.09)*.4,tp);l.rotation.z=Math.cos(k*2.09)*.25;l.rotation.x=-Math.sin(k*2.09)*.25});
+ M(Bx(.55,.38,.32),Lm(0x151a30),0,1.5,0,tp);const ln=M(Cy(.12,.14,.2,10),Lm(0x050610,0x7c5cff,.5),.38,1.5,0,tp);ln.rotation.z=Math.PI/2;
+ [[-8.3,z+7],[-8.3,z-8.5]].forEach(p=>{M(Cy(.03,.03,2.2,5),Lm(0x0d1020),p[0],1.1,p[1]);const sb=M(Pl(1.3,1.7),Bm(0xf4f7ff),p[0]+.1,2.2,p[1]);sb.rotation.y=Math.PI/2});
+ desk(-6,z-5.5,Math.PI/2,codeT('#ff3b3b'),0xff3b3b);M(Cy(.02,.02,.5,5),Lm(0x0d1020),-5.4,1.0,z-4.7);M(new THREE.SphereGeometry(.08,8,6),Lm(0x2a2f4a),-5.4,1.3,z-4.7);
+ const on=M(Pl(1.6,.5),Bm(0xffffff,{map:nameT('ON AIR',0xff3b3b),transparent:true}),-9.85,4,z+8);on.rotation.y=Math.PI/2;anim.push(t=>{on.material.opacity=.65+Math.sin(t*3)*.35});plant(8.5,z+7,1.2)})();
+// 5 LIBRARY
+(()=>{const z=Z(5);[4,-5].forEach(zz=>{M(Bx(.3,4.3,7.2),Lm(0x151a30),9.9,2.15,z+zz);const b=M(Pl(7,4.1),Bm(0xffffff,{map:booksT}),9.7,2.15,z+zz);b.rotation.y=-Math.PI/2});
+ M(Cy(1.1,1.1,.08,18),Lm(0x2a2f4a),5,.78,z);M(Cy(.1,.1,.78,8),Lm(0x0d1020),5,.39,z);M(Cy(.9,.9,.03,18),Lm(0xf59e0b,0xf59e0b,.7),5,.74,z);
+ M(Cy(.03,.03,.5,5),Lm(0x0d1020),5.6,1.05,z-.4);M(new THREE.ConeGeometry(.28,.3,12,1,true),Bm(0xffd27a,{side:THREE.DoubleSide}),5.6,1.4,z-.4);
+ M(Bx(1.1,.45,1.1),Lm(0x3a2b1a),6.8,.22,z+2.2);M(Bx(1.1,.7,.25),Lm(0x3a2b1a),6.8,.7,z+2.7);
+ const bk=[0,1,2].map(k=>M(Bx(.35,.05,.5),Lm([0x7c5cff,0x22d3ee,0xf472b6][k],[0x7c5cff,0x22d3ee,0xf472b6][k],.8),5,2.3,z));anim.push(t=>bk.forEach((b,k)=>{const a=t*.6+k*2.09;b.position.set(5+Math.cos(a)*1.1,2.2+Math.sin(t+k)*.15,z+Math.sin(a)*1.1);b.rotation.y=-a;b.rotation.z=.3}));
+ plant(-8.5,z+8,1.3);plant(-8.5,z-8,1.3)})();
+// 6 MEETING ROOM
+(()=>{const z=Z(6);M(Bx(2.6,.1,7),Lm(0x1a2038,0x7c5cff,.25),-4.5,.76,z);M(Bx(.3,.76,1),Lm(0x0d1020),-4.5,.38,z+2);M(Bx(.3,.76,1),Lm(0x0d1020),-4.5,.38,z-2);
+ [-1,1].forEach(sd=>[-2.4,0,2.4].forEach(zz=>{M(Cy(.28,.28,.07),Lm(0x2a2f4a),-4.5+sd*1.8,.5,z+zz);M(Bx(.07,.55,.5),Lm(0x2a2f4a),-4.5+sd*2.1,.85,z+zz)}));
+ wallScreen(0,2.6,-GAP*(N-1)-12.8,0,9,4.5,ctex(900,450,(x,w,h)=>{const g=x.createLinearGradient(0,0,w,h);g.addColorStop(0,'#1a1450');g.addColorStop(1,'#0e6a86');x.fillStyle=g;x.fillRect(0,0,w,h);x.fillStyle='#fff';x.textAlign='center';x.font='bold 60px Arial';x.fillText("Let's build something",w/2,190);x.fillText('together',w/2,262);x.font='32px Arial';x.fillStyle='#22d3ee';x.fillText('bidhankumar331@gmail.com',w/2,350)}),0x7c5cff);
+ [-2.5,2.5].forEach(zz=>{M(Cy(.01,.01,1,4),Lm(0x0d1020),-4.5,4.5,z+zz);M(new THREE.SphereGeometry(.28,12,10),Bm(0xffe9a8),-4.5,3.9,z+zz)});plant(8.5,z+8,1.3);plant(8.5,z-6,1.3)})();
+// city outside
+const nB=LOW?10:26;for(let k=0;k<nB;k++){const w=2+Math.random()*3,h=6+Math.random()*22,sd=k%2?1:-1;M(Bx(w,h,w),Bm(0xffffff,{map:winT}),sd*(16+Math.random()*22),h/2-2,-Math.random()*190+10)}
+// particles
+const pc=LOW?0:(HIGH?700:350);if(pc){const g=new THREE.BufferGeometry(),a=new Float32Array(pc*3);for(let k=0;k<pc;k++){a[k*3]=(Math.random()-.5)*18;a[k*3+1]=Math.random()*4.6;a[k*3+2]=10-Math.random()*182}g.setAttribute('position',new THREE.BufferAttribute(a,3));const p=new THREE.Points(g,new THREE.PointsMaterial({color:0x22d3ee,size:.06,transparent:true,opacity:.7}));scene.add(p);anim.push(t=>{p.position.y=Math.sin(t*.3)*.2})}
+// camera path
+const cp=[],lp=[];ROOMS.forEach((r,i)=>{const z=Z(i),s=S[i];cp.push(new THREE.Vector3(-s*1.2,1.8,z+8));lp.push(new THREE.Vector3(s*3.5,1.8,z-4))});
+lp[N-1].set(-1.5,2.2,Z(N-1)-12);
+const cc=new THREE.CatmullRomCurve3(cp),lc=new THREE.CatmullRomCurve3(lp);
+// loop
+let cu=0,tu=0,mx=0,my=0,tmx=0,tmy=0;const look=new THREE.Vector3(),calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){tmx=(e.clientX/innerWidth-.5)*2;tmy=(e.clientY/innerHeight-.5)*2}});
+function size(){cam.aspect=innerWidth/innerHeight;cam.fov=cam.aspect<1?80:60;cam.updateProjectionMatrix();R.setSize(innerWidth,innerHeight);meas()}
+addEventListener('resize',size);size();
+const clk=new THREE.Clock();let acc=0,fr=0,first=true,paused=false;
+document.addEventListener('visibilitychange',()=>{paused=document.hidden;if(!paused)loop()});
+function loop(){if(paused)return;requestAnimationFrame(loop);const dt=Math.min(clk.getDelta(),.1),t=clk.elapsedTime;
+ tu=prog();cu=calm?tu:cu+(tu-cu)*Math.min(1,dt*5);setRoom(cu);mx+=(tmx-mx)*.05;my+=(tmy-my)*.05;
+ cam.position.copy(cc.getPoint(Math.min(cu,.9999)));look.copy(lc.getPoint(Math.min(cu,.9999)));
+ if(!calm){cam.position.x+=Math.sin(t*.5)*.1+mx*.35;cam.position.y+=Math.sin(t*.8)*.04-my*.12}
+ cam.lookAt(look);const ri=Math.min(N-1,Math.max(0,cu*(N-1))),a=Math.floor(ri),b=Math.min(N-1,a+1);key.color.setHex(ROOMS[a][1]).lerp(new THREE.Color(ROOMS[b][1]),ri-a);key.position.set(cam.position.x,3.2,cam.position.z-3);
+ anim.forEach(f=>f(t));R.render(scene,cam);
+ if(first){first=false;$('#ld').classList.add('off')}
+ if(qs==='auto'&&!LOW){acc+=dt;fr++;if(acc>2){if(fr/acc<30&&pr>.7){pr=Math.max(.7,pr-.25);R.setPixelRatio(pr);R.setSize(innerWidth,innerHeight)}acc=0;fr=0}}}
+loop();
+}
+try{start()}catch(e){console.error(e);fail()}
+addEventListener('load',()=>{meas();setRoom(0)});setTimeout(()=>{meas();setRoom(Math.max(0,room))},400);
+setTimeout(()=>$('#ld').classList.add('off'),6000);
+</script>
+</body>
+</html>

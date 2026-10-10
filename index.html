@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BKPIT — Bidhan Kumar Paul | Programmer & Applied Mathematics Student</title>
+<meta name="description" content="Bidhan Kumar Paul: Applied Mathematics student and Python programmer, open to remote internships, graduate roles, ML research and freelance work worldwide.">
+<link rel="canonical" href="https://bidhankumarpaul.github.io/">
+<meta name="theme-color" content="#7c5cff"><meta name="author" content="Bidhan Kumar Paul">
+<meta property="og:type" content="website"><meta property="og:url" content="https://bidhankumarpaul.github.io/"><meta property="og:title" content="Bidhan Kumar Paul — Programmer & Applied Mathematics Student"><meta property="og:description" content="Python programmer, applied mathematics student and founder of BKPIT. Projects, GitHub activity, videos and blog."><meta property="og:image" content="https://bidhankumarpaul.github.io/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Bidhan Kumar Paul — BKPIT"><meta name="twitter:image" content="https://bidhankumarpaul.github.io/assets/img/og-image.png">
+<link rel="icon" type="image/png" href="data:image/png;base64,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"><link rel="apple-touch-icon" href="assets/img/logo-192.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Bidhan Kumar Paul","url":"https://bidhankumarpaul.github.io/","jobTitle":"Programmer & Applied Mathematics Student","affiliation":{"@type":"Organization","name":"BKPIT","logo":"https://bidhankumarpaul.github.io/assets/img/logo.png"},"alumniOf":"University of Rajshahi","sameAs":["https://github.com/BidhanKumarPaul","https://www.linkedin.com/in/bidhan-kumar-paul-420a3324b","https://www.youtube.com/@bkpit"]}</script>
+<style>
+:root{--bg:#07090f;--card:#0f1420;--text:#e8ecf4;--mut:#8b95a9;--a:#7c5cff;--b:#22d3ee;--line:#1e2638;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f7fb;--card:#fff;--text:#12172a;--mut:#5b657a;--line:#e3e7f0}}
+:root[data-theme="light"]{--bg:#f6f7fb;--card:#fff;--text:#12172a;--mut:#5b657a;--line:#e3e7f0}
+:root[data-theme="dark"]{--bg:#07090f;--card:#0f1420;--text:#e8ecf4;--mut:#8b95a9;--line:#1e2638}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.grad{background:linear-gradient(120deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b));z-index:99}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 5vw;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:20px;display:flex;align-items:center;gap:10px}
+.links{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.links a{padding:6px 12px;border-radius:99px;color:var(--mut);font-size:14px;transition:.2s}
+.links a:hover,.links a.on{color:var(--text);background:var(--card)}
+button.t{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;width:36px;height:36px;cursor:pointer;font-size:16px}
+section{padding:90px 5vw;max-width:1100px;margin:auto}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:8px}
+.sub{color:var(--mut);margin-bottom:36px;max-width:620px}
+#hero{min-height:88vh;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;position:relative}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(110px);opacity:.28;background:var(--a);top:5%;right:0;z-index:-1;animation:fl 9s ease-in-out infinite alternate}
+@keyframes fl{to{transform:translate(-60px,50px);background:var(--b)}}
+.tag{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:99px;font-size:13px;color:var(--mut)}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 #22c55e;animation:p 2s infinite}
+@keyframes p{70%{box-shadow:0 0 0 8px transparent}}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.05;margin:18px 0}
+.type{font-size:clamp(18px,2.4vw,24px);color:var(--mut);min-height:36px}
+.type b{color:var(--b)}.cur{border-right:2px solid var(--b);animation:bl .8s infinite}
+@keyframes bl{50%{border-color:transparent}}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:12px 24px;border-radius:12px;font-weight:600;border:1px solid var(--line);transition:.25s;cursor:pointer;background:var(--card);color:var(--text);font-size:15px}
+.btn.p{background:linear-gradient(120deg,var(--a),var(--b));color:#fff;border:0}
+.btn:hover{transform:translateY(-3px)}
+.soc{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.soc a{--c:var(--a);display:inline-flex;align-items:center;gap:10px;padding:8px 18px 8px 8px;border:1px solid var(--line);border-radius:99px;font-size:14px;font-weight:600;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(8px);transition:.3s;position:relative;overflow:hidden}
+.soc a i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 18%,transparent);color:var(--c);transition:.3s}
+.soc svg{width:17px;height:17px;fill:currentColor}.soc svg.o{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.soc a:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 10px 28px -8px var(--c)}
+.soc a:hover i{background:var(--c);color:#fff;transform:rotate(-8deg) scale(1.08)}
+@media(max-width:480px){.soc a{padding-right:14px;font-size:13px}}
+.avatar{aspect-ratio:1;max-width:340px;margin:auto;width:100%;border-radius:32% 68% 60% 40%/45% 40% 60% 55%;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;font-size:96px;font-weight:800;color:#fff;animation:mo 10s ease-in-out infinite alternate;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+@keyframes mo{to{border-radius:60% 40% 35% 65%/55% 60% 40% 45%}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--a)}
+.num{font-size:34px;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+.info li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.info span{color:var(--mut)}
+.sk{margin-bottom:18px}.sk div{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--a),var(--b));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.tl{border-left:2px solid var(--line);padding-left:26px;margin-left:6px}
+.tl .card{position:relative;margin-bottom:16px}
+.tl .card:before{content:"";position:absolute;left:-35px;top:28px;width:12px;height:12px;border-radius:50%;background:var(--a);box-shadow:0 0 0 4px var(--bg)}
+.yr{color:var(--b);font-size:13px;font-weight:700}
+.tl h3{font-size:18px;margin:4px 0}.tl p{color:var(--mut);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips span{font-size:12px;padding:4px 12px;border-radius:99px;border:1px solid var(--line);color:var(--mut)}
+form{display:grid;gap:12px}
+input,textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--a);border-color:transparent}
+.rv{opacity:0;transform:translateY(30px);transition:.8s}.rv.in{opacity:1;transform:none}
+.mu{color:var(--mut);font-size:14px;margin-top:6px}.card h3{font-size:18px}
+.ld{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}.meta{display:flex;gap:14px;margin-top:14px;font-size:12px;color:var(--mut)}
+#top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:linear-gradient(120deg,var(--a),var(--b));color:#fff;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:60}
+#top.show{opacity:1;pointer-events:auto}
+.vid img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:12px}.vid h3{font-size:16px}
+.lb{display:flex;justify-content:space-between;font-size:13px;margin:10px 0 5px}
+.vc{font-size:11px;padding:3px 10px;border-radius:99px;background:linear-gradient(120deg,var(--a),var(--b));color:#fff}
+.btn.sm{padding:9px 16px;font-size:13px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;margin-bottom:16px}
+.shots{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.shot{flex:0 0 112px;aspect-ratio:9/19;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));position:relative;overflow:hidden;scroll-snap-align:start;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700;text-align:center}
+.shot:after{content:attr(data-l);padding:6px;opacity:.9}.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+@media(max-width:800px){.feat{grid-template-columns:1fr}}
+#mo{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:.3s;z-index:90}
+#menu{position:fixed;top:0;right:0;height:100%;width:min(320px,86vw);background:var(--card);border-left:1px solid var(--line);transform:translateX(100%);transition:.35s;z-index:100;padding:calc(18px + env(safe-area-inset-top,0px)) 14px calc(20px + env(safe-area-inset-bottom,0px));overflow-y:auto;box-shadow:-20px 0 50px -20px rgba(0,0,0,.5)}
+body.mo #menu{transform:none}body.mo #mo{opacity:1;pointer-events:auto}body.mo{overflow:hidden}
+#menu a{display:flex;align-items:center;gap:14px;padding:11px 14px;border-radius:12px;color:var(--mut);font-weight:600;transition:.2s}
+#menu a b{width:22px;text-align:center}#menu a:hover,#menu a.on{background:color-mix(in srgb,var(--a) 15%,transparent);color:var(--text)}
+.shot.wide{flex:0 0 min(300px,100%);aspect-ratio:16/10}
+.feat.noshot{grid-template-columns:1fr}
+footer{text-align:center;color:var(--mut);padding:40px 5vw;border-top:1px solid var(--line);font-size:14px}
+@media(max-width:800px){#hero,.about{grid-template-columns:1fr}.avatar{max-width:220px;order:-1}.links a:not(.keep){display:none}section{padding:64px 5vw}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<nav>
+ <a class="logo" href="#hero"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAOd0lEQVR42u2ce5BV1ZXGf2ufc9/dvAV5DAi+GAcBjSNkJIKpmBhBpqIySUxqKoxmopJJHKMmGEmLSFJRy1RKQacmo6maSqZiT/lAIZhMlY8KahwzEeMMMVGEEhu1eDTdfR/nnrP3mj/Ovd23m37cRppu0V21q+49j/349lprr2+dvbfQT2pqUrN2rbjq/0uadK4In3GOxcBslEmqZEUwjMCkihOhgPAu8EdjeEYMWx/7nvyhrz72TNLXjRUPqdf8d2IBljfp5cDVqpznJUmrg86sjOgkAmK6si1TEmEbcP+mtfKfPftaB0AqK1ZgmpvFLlujf2087vYSLFKFqAyqWDSuF+kb4JElSqiCIqgInp+MgbMhv3GW659YJ/+9YoV6zc04kG5DbnqC09SENDeLvWSNXmc8thmPReUiNgywKCrgiWA+MODEYiAiGAEPRcMAWy5ijcci47HtkjV6XXOz2KYmBFT6kKAuyVm6Ru9NZVlVLqAVPfY4DpMqVgSTzCJBgQ2b18nXe0pSpwQtbsKrqNXGdI5V5QIhCscrOBX75KFQLhCmc6xatkY3NjeLXdzU1WepNVIXf1dvSDdwZ7lACCSGUOQRGfRow9BOCGEyS6LUwY1b1stdVUwkFimxy5v0HDW8gEXV4Q2VjakYR1xUP0iqYHzwEkM4ayoqBisegmPhprXy0ooV6klTkxqA31me91OcGwbYIVMrAVeG7ETL2FNC/HR9vY1KwsHXExTe8zDJoZMkVWwihRcF/PZjHn/TqWJLb9HlyQyPlYtDB44I2ADGnxEy81MFvITW3U8BbCi8+V9Z9v9fAi81dJKkik1m8MpF/nbz7bLJr1z/puoQariAs5Aa45ixpBArfPFw/VIXO7RiDnfMjQ8zlhToaGmk3GEQb0glSYFvAptkeZOeocr/KKSGqkIRiEow4a9CTr4oT1QSpBdykszlQIRyR0cv4IGfVt7YmmPf/ybw00NojwRECcRwtrGOZV6SlCp2KCUIwEton+RGRPjTr3/Fn7b+st9yvIQOQJKOjpp5KVLOstQX5fyRwKfEGLauXo0NA1Y9/2LN3D5sTiTAYh9htloQxQw3eUg1NGDD5PAPlmLUAsJsgzJJXcxXht31d67TUA83d1MHKJN8FTKM8JDFcKmYCpmY4X6U+pwTRlQkUCSOS4ykNKIAsmGIDcsjCiB/JDWmYeLEjwDqKzlrufyBByvWUT9kAGls8YJ20y9/SmQy3ThZb+UE7Sb2oo8RhsfEBqmCl4T2PT7tLT7JnMYd7JGdtThre72XzCntLT7te3y85LETsmNnpAXUws6tWQ68kYgJod89G18wvhx2HYEDbyTYuTVLxcMdeSomAkYGp1XdNEXjzpbbDX9+LEduQoSfGjjGIsQBs/z+uKniH65exgwOMzcIM1cXQMZAOYQgrL9gz0AmFQPb+Y7GbDxywnstPvWyCmMglwHPKM5Jt0FThXwRrKt/oFMJSCaoq36/ngI7ijBtAsw5CXJ1xGFU4d1WePmNGNhkJZZsRCmWhVHpMgtP28WoVAHthwTGtl1pC7Js3zuTtlKCTEJxKojEZSd8+PgZMGnMwDFuEciX4NVdsGdffX3xBxq5fBGWLYB/vDgucDDptT2w/ufw3iFIJ5R8WZgz6W2uX/QYUxoPIKJ1GnmhpX08d/9mOa++O5VcUimFwsQx8N0r4PRpg2tXvgT/shm2vBhLZn+SJMvW9I6hESiW48rvWVXxdF3fYZqeo6cKvgev7ISbfgK+Dxk/4EdL/43JjQdoCzIYAdX4u3BMM2qIYsXQGBGcwqhUkZb2cVy/+UqKUYoogju+CnNnQmTp9u5AbasSrH/aEA9iJhnbpUHNYiJQjmDx3Ph/ZOOCPRN3vGf2Koay9hmnMHcWzJrsOFSAeZN3V8DJ4huHEUfSh2za4HuKEYfgMGLJpgzZlMGIwzeOtiDLlMYDzJu8m9YCnDzZMXdmXEe1/r7aJpUBrz4TVWKn58+N+9ifavoDzSCNmcNH4UCbpRi4zpHwjDB+jE/PWHv1lcYMRA5GpQqIaKdqGRHaOsq05wMmjM3i+wZjIOH7vLX3EJFVpp3Y2Gm/RJRRqQLWQUOmex1UZs33DoaV5wVFyaYNo3JerxI1KjPw7OfXM13XNsAY+N79e9n6XBvplME6RVWZMMbn+i9N5NILxuC0u0tQFXutaU5kHWPHZrnrgRe4Y+OzPPnvf8+Cs6ZhgG+se5KfNv+ODesu4Usz5lAohJ09qZZRq0qxisKhvGXFd3axvzUGyTrwPeHCBY2s/dpkRjd4ffbtqFKNoOzwPLjnxqk0ZDxaOyzff/Adbr63hcVnNzB+tI/TOnwTgaAcUSiWUFUSDSm++s8P85OfP8/G9ZfylcvmcehQCWOkTxvR024e6oiYfVKab315EpFVtm3P84MH3+GEsT63XHki1umgPM0j5mKppHDBOY2d/zc9e4hdLeVBU4DYOBsacym+vXYrD/ziJf71jhVcdcXHaN2fxxtEyEoklvLJExKcNy8HwOKzG3j4qVb+8Hqps77BtPGIADJG6Mg7vnDzLoxAa4dlx5slfvD1KUwY43eqYj0NcU7BT3Ld+l/xzLYdrPzieVy1cgH797SSTAw+2CkCbXnH3n0h1sFz2zt4Y0/A8k+MrhBhHdTKiSOWIGOE6Scm8T0II8Va5aFfH+TjZ+aYfmKyPhXT2MBrGNDaHvDpC+bwH4/+ns9deDqXfPJUDrYW8f36Jcg6yGU8Xnw1zyev+TPOQaHkuPDcRq6+bEJsvOtU1/cFkHNKNi3c8Y0pndd27y1z5ud38LOtB7l55SSsVbyByJtUzYGyoekzzJ8zhXmf3cjKmx7hueYrmTltDPliOHA5NTaoFDjOPDXDdVecgDrhhLEes09KM2jr/H7YvEjsf+zYVWLPeyG795Z58oU2FBjbOHi1MOJhrZJrTPGzuy8jnw/48rceIQgtqaSH1mk0RGJpPmGMz6J5DXzirFwnOEcaHjkiCbIO9h20XH7TLpzG03wpUD5/4ViuuGhsHP+pc9TDyOE0npbDjoAF86dy3/rlrLz+F1y5+nF++sPlMSMbRAfLkWKd4lzcDmMGv2CrfrLag5sB3LxyEtdcNgFjYmdMgPGjfWZMTh5GN2odM6mRbc8YCh1lvnLpPD618CROnzWecuQoBCW+cPEZnDbjGlrbS3Tky2QzCZztXkZth6u/GzIej941i2za4BkZ8JuNvF+AFGgrHM5xTp6W6pPF1za46nG0F8A30BbkUBVU49UdUeSYNW0Ms2eOp1AKcU4xIpRDy4L5U/GMkC/E11UNqkJbkMM3cZm1dVQH8NTpqboinFT6pkdqg1Qh6cMzlTXpvherlnUxlwmj7jmysV1y2vWMEdi+E3a+YxidVbbvnU5L+zhGpQpEzkMxFALHwbYyYSQ4NVg1ODwOdUQcaAsJrWCdx6hUgZb28by8dzqjs8rOdwzbd8Z1RLarbaHt/r+37FfM5DOvxH3sT3290xbfemtf0pP0Ye9+2NcGZ86EdDJukDFdxK+ajanck65ndrwFP3wICkFcVkfg8/r+KcyZ9BYn5NpI+SFpPyKdiEj5YbecTnRdT3oRb7fF4Y49h8aS8iFywis74S+nw8QxXfX22pYeuaMI926C53dANkW/036f4Y7aqbOjdGQBs9+/Ho9mt4BZKDSmQuZPeXNQAbOXW2bSHhweMPM9OOuUIwuYNaQZ0CcaEKCjGnIFjFGsE/JFjlrItRgMY8i1yuITflzwYIP23QCVeDEmwMQpgwjaB0J+n4+10i1oXy07lxl80L7ewanbD1IF+36+RQloBMlGx4wLijROjeKFmPXUbaH9bZ/dT2Uot5vDvmwM5ZKiY/fpWUE8mHVRgdF/EREWBI369/xrpWLcKSFeSnnt4QaO5XqmY/LhUARsGUZNi2icElHOSxcPExAjvebaZ8p5oXFKxKhpEbZ85J7xyJSgyrf0ZKM7zFiIdG3ccDZ2l43n1ai2disn2ei6vEM9XgDqzVBGEZlx43j2rjt5bsM9ZMeOI5HNxvwsn6fQ2srCr13Nku+spnjwICLDsxBu2AASY7BBwJT58zn3H64imcvx/P33g7MsvOZawkKBqWefjQ2CeOX9MK2IGVaAwlKJWYuXcPpFn0YMvProo2gUsuTbN8aSVCxTLhQGHSY9LgCq2p9yPk/Q3o7xPVwUodaS33cQdQ4xptd9G8cUIAU7nCtdqyDUGmbjeagZ/uWTCtaIUpQPzvbcYyjdgFI0CO+Koetj+DAm43ndJGkYRUcljkK+axR2iAcqDPsegGJrK8XW1uHHR3DigSp/9FGeFmHZsDfKOS5YvTrezTYCVrlWIgVP+wpbooD1IkO3oa7LOZR+yLAy/4tXABC0t/dtNUPpn8AdHXC8KCBA2Gy23C47VNnmJ9Gh2lRX3bXc3uIRFQXj15z9UZOLB1spHmjt9Z7x47WKHS1e/P5QSbJiK1hs23K77KjOpT+WodwOVQEoaDXsfjqmE4mM4vfIiZwh0WAOv56J4dj9dJbgkMH4Qy5BAvwYoHNb+EuW5xIpFny0LRwvLPHbc/zKtvDagwUwvKAf8oMF8JAoYOEvv185WABqjqa4RW9M57jjQ300RZ6bttwud3YeTVG9u7hJ/WfWSrT0Fr0v3cDVQZ4Qxf9AHYNzhJKDECVzJMp57ntinVxbxaIayup0j2oOVtqYzHLNh+l4nLDIxsdvk1V9Ho8Dos3NuKYmNU+sk2vDIjcYjyiRxlPFKlg4Lna3xt8fFJtI4xmPKChyw+O3yaqmJjU9T6Hq94iuz96s5/hJ7vQTLDkej+iKQp6KytxUNci9HdFV3yFva/Vz6liFsshLkvqgH/KGsE0cGzatk0d69rWX+aTv1NSkZu2tdC5sXnqbzjOOi3Ccr3D6B+mYQIHXMDzrIrZuvl22Vx6QpluR/o4J/H8plkF6pDKVjgAAAABJRU5ErkJggg==" alt="BKPIT logo" width="34" height="34" style="border-radius:22%;display:block"><span class="grad">BKPIT</span></a>
+ <div class="links">
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#featured">Featured</a><a href="#projects">Projects</a><a href="#github">GitHub</a><a href="#channel">Channel</a><a href="#blog">Blog</a><a href="#contact" class="keep">Contact</a>
+  <button class="t" id="mb" aria-label="Open menu">☰</button><button class="t" id="lg" aria-label="Language" style="width:auto;padding:0 10px;font-size:13px;font-weight:700">বাং</button><button class="t" id="th" aria-label="Toggle theme">◐</button>
+ </div>
+</nav>
+<div id="mo"></div>
+<aside id="menu" aria-label="Site menu"><div style="display:flex;justify-content:space-between;align-items:center;padding:0 14px 14px"><span style="display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800"><img src="data:image/png;base64,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" alt="BKPIT logo" width="30" height="30" style="border-radius:22%;display:block"><b class="grad">BKPIT</b></span><button class="t" id="mx" aria-label="Close menu">✕</button></div><a href="#about"><b>👤</b><span>About</span></a><a href="#skills"><b>🛠️</b><span>Skills</span></a><a href="#services"><b>💼</b><span>Services</span></a><a href="#featured"><b>⭐</b><span>Featured apps</span></a><a href="#projects"><b>📁</b><span>Projects</span></a><a href="#github"><b>🐙</b><span>GitHub</span></a><a href="#channel"><b>▶️</b><span>Channel</span></a><a href="#blog"><b>✍️</b><span>Blog</span></a><a href="#journey"><b>🎓</b><span>Journey</span></a><a href="#cv"><b>📄</b><span>CV</span></a><a href="#contact"><b>✉️</b><span>Contact</span></a><a href="blog.html" style="margin-top:10px;border:1px solid var(--line)"><b>📚</b><span>BKP Writes ↗</span></a></aside>
+
+<section id="hero">
+ <div class="glow"></div>
+ <div>
+  <span class="tag"><i class="dot"></i> Open to remote opportunities worldwide</span>
+  <h1>Hi, I'm <span class="grad">Bidhan Kumar Paul</span></h1>
+  <p class="type">I'm a <b id="tw"></b><span class="cur"></span></p>
+  <p style="color:var(--mut);margin-top:14px;max-width:540px">Applied Mathematics student at the University of Rajshahi who builds software with Python and AI tools. Open to remote internships, graduate roles, ML research and freelance projects.</p>
+  <div class="chips" id="open"><span>🌍 Remote</span><span>🕒 UTC+6 (Bangladesh)</span><span>Internships</span><span>ML research</span><span>Full-time after graduation</span><span>Freelance</span></div>
+  <div class="cta"><a class="btn p" href="#contact">Let's talk</a><a class="btn" href="https://drive.google.com/uc?export=download&id=13MXcbPRQ5-2WretJyIDhQWt3vC47AG7S" target="_blank" rel="noopener">⬇ Download CV</a><a class="btn" href="office.html">🏢 Enter 3D office</a><a class="btn" href="#journey">View journey</a></div>
+  <div class="soc"><a href="https://github.com/BidhanKumarPaul" style="--c:#8b5cf6" target="_blank" rel="noopener" aria-label="GitHub"><i><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></i>GitHub</a><a href="https://www.linkedin.com/in/bidhan-kumar-paul-420a3324b" style="--c:#0a8bd9" target="_blank" rel="noopener" aria-label="LinkedIn"><i><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></i>LinkedIn</a><a href="https://www.youtube.com/@bkpit" style="--c:#ff2d2d" target="_blank" rel="noopener" aria-label="YouTube"><i><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></i>YouTube</a><a href="https://www.facebook.com/share/1EvQ5ixkCx/" style="--c:#1877f2" target="_blank" rel="noopener" aria-label="Facebook"><i><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.88v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></i>Facebook</a><a href="https://www.instagram.com/mongol_moni" style="--c:#e1306c" target="_blank" rel="noopener" aria-label="Instagram"><i><svg class="o" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></i>Instagram</a><a href="mailto:bidhankumar331@gmail.com" style="--c:#f59e0b" aria-label="Email"><i><svg class="o" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></i>Email</a></div>
+ </div>
+ <div class="avatar" id="av"><img src="assets/img/my-profile-img.jpg" alt="Bidhan Kumar Paul" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/img/my-profile-img.png'}else{this.remove()}">BP</div>
+</section>
+
+<section id="about" class="rv">
+ <h2>About <span class="grad">me</span></h2>
+ <p class="sub">Self-taught programmer since 2020, aspiring machine learning researcher.</p>
+ <div class="about">
+  <div>
+   <p style="color:var(--mut)">As founder of BKP IT, I use programming and an entrepreneurial mindset to help businesses grow online. I build web apps and software with HTML, CSS and JavaScript on the front end, and Python on the back end, and I'm always learning through courses, communities and new projects.</p>
+   <div class="stats">
+    <div class="card"><div class="num grad" data-n="6">0</div><small>Years coding</small></div>
+    <div class="card"><div class="num grad" data-n="2">0</div><small>Years managing a YouTube channel</small></div>
+   </div>
+  </div>
+  <div class="card"><ul class="info">
+   <li><span>Location</span>Rajshahi, Bangladesh</li>
+   <li><span>Degree</span>B.Sc. in Applied Mathematics</li>
+   <li><span>University</span>University of Rajshahi</li>
+   <li><span>Email</span>bidhankumar331@gmail.com</li>
+   <li><span>Freelance</span>Available</li>
+  </ul></div>
+ </div>
+</section>
+
+<section id="skills" class="rv">
+ <h2>Skills & <span class="grad">tools</span></h2>
+ <p class="sub">Technology moves fast, so I keep sharpening the basics and exploring more.</p>
+ <div class="grid" id="sg"></div>
+</section>
+
+<section id="services" class="rv">
+ <h2>What <span class="grad">BKPIT</span> offers</h2>
+ <p class="sub">Practical digital work, from idea to launch.</p>
+ <div class="grid">
+  <div class="card"><div class="num">💻</div><h3>Web Development</h3><p class="mu">Fast, responsive websites built with HTML, CSS and JavaScript.</p></div>
+  <div class="card"><div class="num">🐍</div><h3>Python Solutions</h3><p class="mu">Scripts, automation and software tools, with a math and ML mindset.</p></div>
+  <div class="card"><div class="num">🎬</div><h3>Video Editing & SEO</h3><p class="mu">Edited videos and YouTube SEO, backed by two years of channel management.</p></div>
+  <div class="card"><div class="num">🎨</div><h3>Design with Canva</h3><p class="mu">Thumbnails, social posts and clean visual branding.</p></div>
+ </div>
+</section>
+
+<section id="featured" class="rv">
+ <h2>Featured <span class="grad">apps &amp; websites</span></h2>
+ <p class="sub">My top apps and websites, with previews, tech and links.</p>
+<div class="card feat"><div><h3>MANGAL</h3><p class="mu fd">Offline-first AI agent with a React web interface and a native Android app. Private, fast, and works without internet.</p><div class="chips"><span>TypeScript</span><span>Offline-first</span><span>Vibe coded</span></div>
+ <div class="cta"><a class="btn p sm" href="https://github.com/BidhanKumarPaul/MANGAL" target="_blank" rel="noopener">GitHub</a><a class="btn sm" href="https://github.com/BidhanKumarPaul/MANGAL/releases/latest" target="_blank" rel="noopener">⬇ Download APK</a><!-- Live demo: add <a class="btn sm" href="YOUR-URL">Live demo</a> here --></div></div>
+ <div class="shots"><div class="shot" data-l="MANGAL screenshot 1"><img loading="lazy" src="assets/img/projects/mangal-1.png" alt="MANGAL screenshot 1" onerror="this.remove()"></div><div class="shot" data-l="MANGAL screenshot 2"><img loading="lazy" src="assets/img/projects/mangal-2.png" alt="MANGAL screenshot 2" onerror="this.remove()"></div><div class="shot" data-l="MANGAL screenshot 3"><img loading="lazy" src="assets/img/projects/mangal-3.png" alt="MANGAL screenshot 3" onerror="this.remove()"></div></div></div>
+<div class="card feat"><div><h3>Ekagrata</h3><p class="mu fd">Minimalist Android launcher that replaces your home screen with one goal, a focus timer, and a distraction shield. Built with Kotlin.</p><div class="chips"><span>Kotlin</span><span>Android</span><span>MIT License</span><span>Vibe coded</span></div>
+ <div class="cta"><a class="btn p sm" href="https://github.com/BidhanKumarPaul/Ekagrata" target="_blank" rel="noopener">GitHub</a><a class="btn sm" href="https://github.com/BidhanKumarPaul/Ekagrata/releases/latest" target="_blank" rel="noopener">⬇ Download APK</a><!-- Live demo: add <a class="btn sm" href="YOUR-URL">Live demo</a> here --></div></div>
+ <div class="shots"><div class="shot" data-l="Ekagrata screenshot 1"><img loading="lazy" src="assets/img/projects/ekagrata-1.png" alt="Ekagrata screenshot 1" onerror="this.remove()"></div><div class="shot" data-l="Ekagrata screenshot 2"><img loading="lazy" src="assets/img/projects/ekagrata-2.png" alt="Ekagrata screenshot 2" onerror="this.remove()"></div><div class="shot" data-l="Ekagrata screenshot 3"><img loading="lazy" src="assets/img/projects/ekagrata-3.png" alt="Ekagrata screenshot 3" onerror="this.remove()"></div></div></div>
+<div class="card feat noshot" data-noshot="1"><div><h3>pdf-personal-tutor</h3><p class="mu fd">Upload your lecture notes as a PDF. Ask questions in plain English. Get answers grounded in your material, with page citations, powered by a local embedding model (free) and Groq's LLM API (free tier).</p><div class="chips"><span>Web tool</span><span>Python</span><span>MIT License</span></div>
+ <div class="cta"><a class="btn p sm" href="https://github.com/BidhanKumarPaul/pdf-personal-tutor" target="_blank" rel="noopener">GitHub</a><a class="btn sm" href="https://pdftutor-bkpit.streamlit.app/" target="_blank" rel="noopener">🔧 Visit tool</a></div></div></div>
+<div class="card feat" data-web="1" data-site="https://bidhankumarpaul.github.io/APM-Resources-by-BKP/"><div><h3>APM-Resources-by-BKP</h3><p class="mu fd">RU-APM is a resource website for Applied Mathematics students at the University of Rajshahi, with notes, books and past year questions for every semester.</p><div class="chips"><span>Website</span><span>JavaScript</span><span>MIT License</span></div>
+ <div class="cta"><a class="btn p sm" href="https://github.com/BidhanKumarPaul/APM-Resources-by-BKP" target="_blank" rel="noopener">GitHub</a><a class="btn sm" data-site href="https://bidhankumarpaul.github.io/APM-Resources-by-BKP/" target="_blank" rel="noopener">🌐 Visit website</a></div></div>
+ <div class="shots"><div class="shot wide" data-l="APM-Resources-by-BKP preview"></div></div></div>
+<div class="card feat" data-web="1" data-site="https://bidhankumarpaul.github.io/"><div><h3>BidhanKumarPaul.github.io</h3><p class="mu fd">My personal portfolio website.</p><div class="chips"><span>Website</span><span>HTML</span><span>MIT License</span></div>
+ <div class="cta"><a class="btn p sm" href="https://github.com/BidhanKumarPaul/BidhanKumarPaul.github.io" target="_blank" rel="noopener">GitHub</a><a class="btn sm" data-site href="https://bidhankumarpaul.github.io/" target="_blank" rel="noopener">🌐 Visit website</a></div></div>
+ <div class="shots"><div class="shot wide" data-l="BidhanKumarPaul.github.io preview"></div></div></div>
+</section>
+
+<section id="projects" class="rv">
+ <h2>Latest <span class="grad">projects</span></h2>
+ <p class="sub">My six most recently updated repositories, pulled live from GitHub.</p>
+ <div class="grid" id="pg"><a class="card" href="https://github.com/BidhanKumarPaul/BidhanKumarPaul.github.io" target="_blank" rel="noopener"><h3>BidhanKumarPaul.github.io</h3><p class="mu">portfolio</p><div class="meta"><span><i class="ld" style="background:#e34c26"></i>HTML</span></div></a><a class="card" href="https://github.com/BidhanKumarPaul/MANGAL" target="_blank" rel="noopener"><h3>MANGAL</h3><p class="mu">Your new offline Agent</p><div class="meta"><span><i class="ld" style="background:#3178c6"></i>TypeScript</span></div></a><a class="card" href="https://github.com/BidhanKumarPaul/Ekagrata" target="_blank" rel="noopener"><h3>Ekagrata</h3><p class="mu">Restoring focus</p><div class="meta"><span><i class="ld" style="background:#a97bff"></i>Kotlin</span><span>⚖ MIT</span></div></a><a class="card" href="https://github.com/BidhanKumarPaul/pdf-personal-tutor" target="_blank" rel="noopener"><h3>pdf-personal-tutor</h3><p class="mu">No description yet.</p><div class="meta"><span><i class="ld" style="background:#3572a5"></i>Python</span><span>⚖ MIT</span></div></a><a class="card" href="https://github.com/BidhanKumarPaul/APM-Resources-by-BKP" target="_blank" rel="noopener"><h3>APM-Resources-by-BKP</h3><p class="mu">No description yet.</p><div class="meta"><span><i class="ld" style="background:#e34c26"></i>HTML</span></div></a><a class="card" href="https://github.com/BidhanKumarPaul?tab=repositories" target="_blank" rel="noopener" style="display:grid;place-items:center;text-align:center"><h3 class="grad">View all on GitHub →</h3></a></div>
+</section>
+
+<section id="github" class="rv">
+ <h2>GitHub <span class="grad">overview</span></h2>
+ <p class="sub">Live stats and activity from my GitHub profile.</p>
+ <div class="about">
+  <div class="card">
+   <div style="display:flex;gap:14px;align-items:center"><img id="gav" alt="" width="64" height="64" style="border-radius:50%;display:none"><div><b id="gnm">Bidhan Kumar Pal</b><div class="mu" style="margin:0">@BidhanKumarPaul · he/him</div></div></div>
+   <p class="mu" id="gbio">A learner who likes to learn and is passionate about building innovative things.</p>
+   <div class="stats" style="margin-top:18px">
+    <div><div class="num grad" id="gr">10</div><small>Repositories</small></div>
+    <div><div class="num grad" id="gf">16</div><small>Followers</small></div>
+    <div><div class="num grad" id="gg">32</div><small>Following</small></div>
+    <div><div class="num grad" id="gs">0</div><small>Stars earned</small></div>
+   </div>
+   <a class="btn p" style="display:inline-block;margin-top:20px" href="https://github.com/BidhanKumarPaul" target="_blank" rel="noopener">Open GitHub profile →</a>
+  </div>
+  <div class="card"><b>Top languages</b><div id="gl" style="margin-top:14px"></div></div>
+ </div>
+ <div class="card" style="margin-top:16px"><b>Recent activity</b><ul class="info" id="ga" style="padding:0;margin-top:8px"><li><span>Loading activity…</span></li></ul></div>
+ <div class="card" style="margin-top:16px"><b>Contribution graph</b><div style="overflow-x:auto;margin-top:12px"><img id="gc" src="https://ghchart.rshah.org/7c5cff/BidhanKumarPaul" alt="GitHub contribution graph" style="min-width:640px;width:100%" onerror="this.parentNode.innerHTML='<span class=mu>Graph loads on the live site.</span>'"></div></div>
+</section>
+
+<section id="channel" class="rv">
+ <h2>My <span class="grad">channel</span></h2>
+ <p class="sub">Latest videos from BKP IT on YouTube: digital marketing, freelancing and programming.</p>
+ <div class="grid" id="yg"><a class="card" href="https://www.youtube.com/@bkpit" target="_blank" rel="noopener"><h3>▶ Watch on YouTube</h3><p class="mu">Latest videos load here automatically on the live site.</p></a></div>
+ <div class="cta"><a class="btn p" href="https://www.youtube.com/@bkpit?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a><a class="btn" href="https://www.youtube.com/@bkpit" target="_blank" rel="noopener">Visit channel</a></div>
+</section>
+
+<section id="blog" class="rv">
+ <h2>BKP <span class="grad">writes</span></h2>
+ <p class="sub">Notes on math, code and learning in public.</p>
+ <div class="grid" id="bg"><a class="card" href="blog.html"><h3>Read the blog →</h3><p class="mu">Short posts on programming, math and ML.</p></a></div>
+ <div class="cta"><a class="btn p" href="blog.html">Visit BKP Writes →</a></div>
+</section>
+
+<section id="journey" class="rv">
+ <h2>My <span class="grad">journey</span></h2>
+ <p class="sub">Motivated to apply mathematical problem solving to real-world software.</p>
+ <div class="tl">
+  <div class="card"><span class="yr">2026 – 2030</span><h3>B.Sc. in Applied Mathematics</h3><p>University of Rajshahi, Bangladesh. Ongoing.</p></div>
+  <div class="card"><span class="yr">2021 – 2023</span><h3>Manager, Learn with Ratan</h3><p>Managed a YouTube channel for two years: uploads, video editing and SEO.</p><div class="chips"><span>Video editing</span><span>SEO</span><span>Content</span></div></div>
+  <div class="card"><span class="yr">2023 – 2025</span><h3>HSC, Science (GPA 5.00)</h3><p>Govt. Shah Sultan College, Bogura.</p></div>
+  <div class="card"><span class="yr">2018 – 2023</span><h3>SSC, Science (GPA 5.00)</h3><p>Mahishaban High School, Bogura.</p></div>
+  <div class="card"><span class="yr">2011 – 2017</span><h3>PSC (GPA 5.00)</h3><p>Pirganj Shishu Vidya Niketon, Naogaon.</p></div>
+ </div>
+</section>
+
+<section id="cv" class="rv"><div class="card" style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:space-between"><div><h2 style="font-size:28px;margin-bottom:4px">My <span class="grad">CV</span></h2><p class="mu" style="margin:0">Download my latest CV or view it online.</p></div><div class="cta" style="margin:0"><a class="btn p" href="https://drive.google.com/uc?export=download&id=13MXcbPRQ5-2WretJyIDhQWt3vC47AG7S" target="_blank" rel="noopener">⬇ Download CV</a><a class="btn" href="https://drive.google.com/file/d/13MXcbPRQ5-2WretJyIDhQWt3vC47AG7S/view" target="_blank" rel="noopener">View online</a></div></div></section>
+
+<section id="contact" class="rv">
+ <h2>Get in <span class="grad">touch</span></h2>
+ <p class="sub">Have a project or idea? Send a message and I'll reply when I'm free.</p>
+ <div class="about">
+  <form id="cf">
+   <input id="n" placeholder="Your name" required>
+   <input id="e" type="email" placeholder="Your email" required>
+   <input id="s" placeholder="Subject" required>
+   <textarea id="m" rows="5" placeholder="Message" required></textarea>
+   <button class="btn p" type="submit">Send message</button><p id="fs" class="mu" aria-live="polite" style="margin:0"></p>
+  </form>
+  <div class="grid" style="grid-template-columns:1fr">
+   <div class="card"><b>Email</b><br><a href="mailto:bidhankumar331@gmail.com" style="color:var(--b)">bidhankumar331@gmail.com</a></div>
+   <div class="card"><b>Phone</b><br><a href="tel:+8801860841548" style="color:var(--b)">+880 1860 841548</a></div>
+   <div class="card"><b>Based in</b><br>Mirzapur, Rajshahi, Bangladesh</div>
+  </div>
+ </div>
+</section>
+
+<button id="top" aria-label="Back to top" onclick="scrollTo({top:0})">↑</button>
+<footer><div style="display:flex;justify-content:center;margin-bottom:12px"><img src="data:image/png;base64,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" alt="BKPIT logo" width="44" height="44" style="border-radius:22%;display:block"></div>© <span id="y"></span> BKPIT. All rights reserved.<br><b class="grad">Developed by BKPIT</b></footer>
+
+<script src="posts.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+// theme
+const R=document.documentElement;
+try{const t=localStorage.getItem('th');if(t)R.dataset.theme=t}catch(e){}
+$('#th').onclick=()=>{const d=R.dataset.theme?R.dataset.theme==='dark':!matchMedia('(prefers-color-scheme: light)').matches;R.dataset.theme=d?'light':'dark';try{localStorage.setItem('th',R.dataset.theme)}catch(e){}};
+$('#y').textContent=new Date().getFullYear();
+// typewriter
+let W=['Python Programmer','Applied Mathematics Student','Aspiring ML Researcher','Founder of BKP IT'];let wi=0,ci=0,del=false;
+(function tick(){const w=W[wi];ci+=del?-1:1;$('#tw').textContent=w.slice(0,ci);let d=del?35:80;
+if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;wi=(wi+1)%W.length;d=300}setTimeout(tick,d)})();
+// skills
+const S=[['Python',80,'🐍'],['Github',75,'🔀'],['Canva',75,'🎨'],['C++',70,'⚙️'],['Video Editing',70,'🎬'],['CSS',40,'🖌️'],['HTML',100,'🌐'],['Kotlin',null,'🟣'],['TypeScript',null,'🔷']];
+$('#sg').innerHTML=S.map(s=>`<div class="card sk"><div><span>${s[2]} ${s[0]}</span>${s[1]==null?'<b class="vc">vibe coded</b></div><div class="mu" style="margin:0">Built with AI-assisted development</div>':'<b>'+s[1]+'%</b></div><div class="bar" style="display:block"><i data-w="'+s[1]+'"></i></div>'}</div>`).join('');
+// reveal + counters + bars
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(!x.isIntersecting)return;const el=x.target;el.classList.add('in');
+el.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w+'%');
+el.querySelectorAll('[data-n]').forEach(c=>{const t=+c.dataset.n;let v=0;const i=setInterval(()=>{c.textContent=++v;if(v>=t)clearInterval(i)},180)});io.unobserve(el)}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+// scroll progress + active link
+const secs=[...document.querySelectorAll('section[id]')],ls=[...document.querySelectorAll('.links a[href^="#"]')];
+addEventListener('scroll',()=>{const h=document.documentElement;$('#prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+let cur='';secs.forEach(s=>{if(s.getBoundingClientRect().top<150)cur=s.id});ls.forEach(a=>a.classList.toggle('on',a.hash==='#'+cur))},{passive:true});
+// back to top
+addEventListener('scroll',()=>$('#top').classList.toggle('show',scrollY>600),{passive:true});
+// live GitHub + YouTube (work on your hosted site; the sandbox preview blocks outside requests)
+const U='BidhanKumarPaul',esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ago=d=>{const m=(Date.now()-new Date(d))/6e4;return m<60?Math.max(1,~~m)+'m ago':m<1440?~~(m/60)+'h ago':~~(m/1440)+'d ago'};
+const J=u=>{const k='c:'+u;try{const c=JSON.parse(localStorage.getItem(k));if(c&&Date.now()-c.t<18e5)return Promise.resolve(c.d)}catch(e){}
+return fetch(u).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{try{localStorage.setItem(k,JSON.stringify({t:Date.now(),d}))}catch(e){}return d})};
+function langs(L){const t=Object.values(L).reduce((a,b)=>a+b,0)||1,c=['#a97bff','#3178c6','#f1e05a','#e34c26','#3572a5','#563d7c','#888'];
+$('#gl').innerHTML=Object.entries(L).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([k,v],i)=>`<div class="lb"><span>${esc(k)}</span><b>${(v/t*100).toFixed(1)}%</b></div><div class="bar"><i data-w="${v/t*100}" style="width:${v/t*100}%;background:${c[i]}"></i></div>`).join('')}
+langs({Kotlin:39.65,TypeScript:31.92,JavaScript:15.69,HTML:7.31,Python:3.22,CSS:2.2});
+J(`https://api.github.com/users/${U}`).then(u=>{$('#gr').textContent=u.public_repos;$('#gf').textContent=u.followers;$('#gg').textContent=u.following;
+$('#gnm').textContent=u.name||U;if(u.bio)$('#gbio').textContent=u.bio;$('#gav').src=u.avatar_url;$('#gav').style.display='block'}).catch(()=>{});
+J(`https://api.github.com/users/${U}/repos?per_page=100&sort=updated`).then(d=>{$('#gs').textContent=d.reduce((a,x)=>a+x.stargazers_count,0);
+const L={};d.filter(x=>!x.fork&&x.language).forEach(x=>L[x.language]=(L[x.language]||0)+1);if(Object.keys(L).length)langs(L);
+const C={TypeScript:'#3178c6',Kotlin:'#a97bff',HTML:'#e34c26',Python:'#3572a5',JavaScript:'#f1e05a',CSS:'#563d7c','C++':'#f34b7d',PHP:'#4f5d95',Java:'#b07219'};
+fillFeat(d);const pr=d.filter(x=>!x.fork&&x.name.toLowerCase()!==U.toLowerCase()).sort((a,b)=>new Date(b.pushed_at)-new Date(a.pushed_at)).slice(0,6);
+if(pr.length)$('#pg').innerHTML=pr.map(x=>`<a class="card" href="${esc(x.html_url)}" target="_blank" rel="noopener"><h3>${esc(x.name)}</h3><p class="mu">${esc(x.description)||'No description yet.'}</p><div class="meta"><span><i class="ld" style="background:${C[x.language]||'#888'}"></i>${esc(x.language)||'Code'}</span>${x.license?`<span>⚖ ${esc(x.license.spdx_id)}</span>`:''}<span>★ ${x.stargazers_count}</span><span>${ago(x.pushed_at)}</span></div></a>`).join('')+'<a class="card" href="https://github.com/BidhanKumarPaul?tab=repositories" target="_blank" rel="noopener" style="display:grid;place-items:center;text-align:center"><h3 class="grad">View all on GitHub →</h3></a>'}).catch(()=>{});
+J(`https://api.github.com/users/${U}/events/public?per_page=30`).then(ev=>{
+const t=e=>{const n=e.repo.name.split('/')[1],P=e.payload;
+ if(e.type==='PushEvent'){const c=P.size||(P.commits||[]).length||1;return `Pushed ${c} commit${c>1?'s':''} to ${n}`}
+ if(e.type==='CreateEvent')return `Created ${P.ref_type} ${P.ref||n}`;
+ if(e.type==='WatchEvent')return `Starred ${e.repo.name}`;
+ if(e.type==='ForkEvent')return `Forked ${e.repo.name}`;
+ if(e.type==='PullRequestEvent')return `${P.action} a pull request in ${n}`;
+ if(e.type==='IssuesEvent')return `${P.action} an issue in ${n}`;return null};
+const rows=ev.map(e=>[t(e),e.created_at]).filter(x=>x[0]).slice(0,6);
+if(rows.length)$('#ga').innerHTML=rows.map(x=>`<li>${esc(x[0])}<span>${ago(x[1])}</span></li>`).join('')}).catch(()=>{$('#ga').innerHTML='<li><span>Activity loads on the live site.</span></li>'});
+J('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=UC0mrSl-0-uuU_ewaSPb4JpA')).then(d=>{
+const v=(d.items||[]).slice(0,3);if(!v.length)return;
+$('#yg').innerHTML=v.map(i=>`<a class="card vid" href="${esc(i.link)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(i.thumbnail)}" alt=""><h3>${esc(i.title)}</h3><p class="mu">${new Date(i.pubDate.replace(' ','T')+'Z').toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}</p></a>`).join('')}).catch(()=>{});
+function webShot(c){if(!c.dataset.web||!c.dataset.site||c.dataset.has||c.dataset.shot)return;c.dataset.shot=1;const n=c.querySelector('h3').textContent,u=encodeURIComponent(c.dataset.site);
+c.querySelector('.shots').innerHTML=`<div class="shot wide" data-l="${esc(n)} preview"><img src="https://s.wordpress.com/mshots/v1/${u}?w=900&h=560" alt="${esc(n)} preview" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://image.thum.io/get/width/900/crop/560/${c.dataset.site}'}else this.remove()"></div>`}
+document.querySelectorAll('.feat[data-web][data-site]').forEach(webShot);
+function fillFeat(d){document.querySelectorAll('.feat').forEach(c=>{const n=c.querySelector('h3').textContent.trim(),x=d.find(y=>y.name===n);if(!x)return;
+if(x.description)c.querySelector('.fd').textContent=x.description;
+if(c.dataset.web){const u=n.toLowerCase()===U.toLowerCase()+'.github.io'?'https://bidhankumarpaul.github.io/':(x.homepage||(x.has_pages?`https://${U.toLowerCase()}.github.io/${x.name}/`:''));
+if(u){c.dataset.site=u;const a=c.querySelector('[data-site]');a.href=u;a.hidden=false;webShot(c)}}})}
+const RM=repo=>{const k='rm:'+repo;try{const c=JSON.parse(localStorage.getItem(k));if(c&&Date.now()-c.t<18e5)return Promise.resolve(c.d)}catch(e){}
+return fetch(`https://api.github.com/repos/${U}/${repo}/readme`,{headers:{Accept:'application/vnd.github.raw'}}).then(r=>{if(!r.ok)throw 0;return r.text()}).then(d=>{try{localStorage.setItem(k,JSON.stringify({t:Date.now(),d}))}catch(e){}return d})};
+// featured apps: pull screenshots straight from each repo's README
+document.querySelectorAll('.feat:not([data-noshot])').forEach(card=>{const repo=card.querySelector('h3').textContent.trim();
+RM(repo).then(t=>{
+const u=[...t.matchAll(/!\[[^\]]*\]\(\s*<?([^)\s>]+)/g)].map(x=>x[1]).concat([...t.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)].map(x=>x[1]));
+const ok=[...new Set(u)].filter(x=>!/shields\.io|badge|\.svg(\?|$)|github\.com\/[^/]+\/[^/]+\/actions|visitor|counter|hits\./i.test(x)).map(x=>{
+ if(/^https?:/.test(x))return x.replace(/github\.com\/([^/]+)\/([^/]+)\/blob\//,'raw.githubusercontent.com/$1/$2/').replace(/\?raw=true$/,'');
+ return `https://raw.githubusercontent.com/${U}/${repo}/HEAD/${x.replace(/^\.?\//,'')}`}).slice(0,6);
+if(ok.length){card.dataset.has=1;card.querySelector('.shots').innerHTML=ok.map((x,i)=>`<div class="shot" data-l="${esc(repo)} screenshot ${i+1}"><img loading="lazy" src="${esc(x)}" alt="${esc(repo)} screenshot ${i+1}" onerror="this.remove()"></div>`).join('')}else webShot(card)}).catch(()=>{})});
+// slide-out menu
+const tm=o=>document.body.classList.toggle('mo',o);
+$('#mb').onclick=()=>tm(true);$('#mx').onclick=$('#mo').onclick=()=>tm(false);
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>tm(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')tm(false)});
+addEventListener('scroll',()=>{let c='';document.querySelectorAll('section[id]').forEach(x=>{if(x.getBoundingClientRect().top<160)c=x.id});document.querySelectorAll('#menu a[href^="#"]').forEach(a=>a.classList.toggle('on',a.hash==='#'+c))},{passive:true});
+// blog teasers
+if(window.POSTS&&POSTS.length)$('#bg').innerHTML=POSTS.slice(0,3).map(x=>`<a class="card" href="blog.html#/${x.id}"><span class="yr">${esc(x.tag)}</span><h3>${esc(x.title)}</h3><p class="mu">${esc(x.summary)}</p></a>`).join('');
+// language switch (EN / বাংলা)
+const BN=[['.links a[href="#about"]','আমার সম্পর্কে'],['.links a[href="#skills"]','দক্ষতা'],['.links a[href="#featured"]','বিশেষ'],['.links a[href="#projects"]','প্রজেক্ট'],['.links a[href="#channel"]','চ্যানেল'],['.links a[href="#blog"]','ব্লগ'],['.links a[href="#contact"]','যোগাযোগ'],
+['#hero .tag','<i class="dot"></i> বিশ্বজুড়ে রিমোট কাজের জন্য উন্মুক্ত'],['#hero h1','হ্যালো, আমি <span class="grad">বিধান কুমার পাল</span>'],['#hero div>p[style]','রাজশাহী বিশ্ববিদ্যালয়ের ফলিত গণিতের শিক্ষার্থী, পাইথন ও এআই টুল দিয়ে সফটওয়্যার বানাই। রিমোট ইন্টার্নশিপ, গ্র্যাজুয়েট চাকরি, এমএল গবেষণা ও ফ্রিল্যান্স প্রজেক্টের জন্য উন্মুক্ত।'],
+['#hero .cta a:nth-child(1)','কথা বলি'],['#hero .cta a:nth-child(2)','⬇ সিভি ডাউনলোড'],['#hero .cta a:nth-child(3)','🏢 থ্রিডি অফিসে ঢুকুন'],['#hero .cta a:nth-child(4)','যাত্রা দেখুন'],
+['#about h2','আমার <span class="grad">সম্পর্কে</span>'],['#about .sub','২০২০ সাল থেকে নিজে নিজে প্রোগ্রামিং শেখা, ভবিষ্যৎ মেশিন লার্নিং গবেষক।'],
+['#about .about>div>p','BKP IT-এর প্রতিষ্ঠাতা হিসেবে আমি প্রোগ্রামিং ও উদ্যোক্তা মানসিকতা দিয়ে ব্যবসাকে অনলাইনে এগিয়ে নিতে সাহায্য করি। ফ্রন্ট-এন্ডে HTML, CSS, JavaScript এবং ব্যাক-এন্ডে Python দিয়ে ওয়েব অ্যাপ ও সফটওয়্যার বানাই, আর কোর্স, কমিউনিটি ও নতুন প্রজেক্টের মাধ্যমে সবসময় শিখছি।'],
+['#skills h2','দক্ষতা ও <span class="grad">টুলস</span>'],['#skills .sub','প্রযুক্তি দ্রুত বদলায়, তাই আমি মৌলিক বিষয়গুলো ধারালো রাখি এবং নতুন কিছু শিখতে থাকি।'],
+['#services h2','<span class="grad">BKPIT</span> যা দেয়'],['#services .sub','আইডিয়া থেকে লঞ্চ পর্যন্ত বাস্তব ডিজিটাল কাজ।'],
+['#featured h2','বিশেষ <span class="grad">অ্যাপ ও ওয়েবসাইট</span>'],['#featured .sub','আমার সেরা প্রজেক্ট: স্ক্রিনশট, টেক ও ডাউনলোডসহ।'],
+['#projects h2','সাম্প্রতিক <span class="grad">প্রজেক্ট</span>'],['#projects .sub','GitHub থেকে সরাসরি আনা আমার সবচেয়ে সাম্প্রতিক ছয়টি রিপোজিটরি।'],
+['#github h2','GitHub <span class="grad">ওভারভিউ</span>'],['#github .sub','আমার GitHub প্রোফাইলের লাইভ পরিসংখ্যান ও কার্যক্রম।'],
+['#channel h2','আমার <span class="grad">চ্যানেল</span>'],['#channel .sub','BKP IT ইউটিউব চ্যানেলের সর্বশেষ ভিডিও: ডিজিটাল মার্কেটিং, ফ্রিল্যান্সিং ও প্রোগ্রামিং।'],
+['#blog h2','BKP <span class="grad">লেখে</span>'],['#blog .sub','গণিত, কোড ও শেখার নোট।'],
+['#journey h2','আমার <span class="grad">যাত্রা</span>'],['#journey .sub','গাণিতিক সমস্যা সমাধানকে বাস্তব সফটওয়্যারে প্রয়োগ করার অনুপ্রেরণা নিয়ে এগোচ্ছি।'],
+['#cv h2','আমার <span class="grad">সিভি</span>'],['#cv .cta a:nth-child(1)','⬇ সিভি ডাউনলোড'],['#cv .cta a:nth-child(2)','অনলাইনে দেখুন'],
+['#contact h2','যোগাযোগ <span class="grad">করুন</span>'],['#contact .sub','কোনো প্রজেক্ট বা আইডিয়া আছে? মেসেজ পাঠান, সময় পেলেই উত্তর দেব।']];
+BN.push(['#menu a[href="#about"] span','আমার সম্পর্কে'],['#menu a[href="#skills"] span','দক্ষতা'],['#menu a[href="#services"] span','সেবা'],['#menu a[href="#featured"] span','বিশেষ অ্যাপ'],['#menu a[href="#projects"] span','প্রজেক্ট'],['#menu a[href="#github"] span','GitHub'],['#menu a[href="#channel"] span','চ্যানেল'],['#menu a[href="#blog"] span','ব্লগ'],['#menu a[href="#journey"] span','যাত্রা'],['#menu a[href="#cv"] span','সিভি'],['#menu a[href="#contact"] span','যোগাযোগ'],['#menu a[href="blog.html"] span','BKP লেখে ↗']);
+BN.forEach(([q,b])=>{const el=document.querySelector(q);if(el){el.dataset.en=el.innerHTML;el.dataset.bn=b}});
+const PH={n:['Your name','আপনার নাম'],e:['Your email','আপনার ইমেইল'],s:['Subject','বিষয়'],m:['Message','বার্তা']};
+const ROLES={en:W.slice(),bn:['পাইথন প্রোগ্রামার','ফলিত গণিতের শিক্ষার্থী','ভবিষ্যৎ এমএল গবেষক','BKP IT-এর প্রতিষ্ঠাতা']};let L='en';
+function setL(l){L=l;R.lang=l;document.querySelectorAll('[data-bn]').forEach(el=>el.innerHTML=el.dataset[l]);
+Object.entries(PH).forEach(([k,v])=>$('#'+k).placeholder=v[l==='bn'?1:0]);$('#cf button').textContent=l==='bn'?'বার্তা পাঠান':'Send message';
+W=ROLES[l];wi=0;ci=0;del=false;$('#lg').textContent=l==='bn'?'EN':'বাং';try{localStorage.setItem('lg',l)}catch(e){}}
+$('#lg').onclick=()=>setL(L==='en'?'bn':'en');
+try{if(localStorage.getItem('lg')==='bn')setL('bn')}catch(e){}
+// contact form: sends straight to your inbox via FormSubmit (no account needed)
+$('#cf').onsubmit=async e=>{e.preventDefault();const f=$('#fs'),b=$('#cf button'),bn=L==='bn';b.disabled=true;f.textContent=bn?'পাঠানো হচ্ছে…':'Sending…';
+try{const r=await fetch('https://formsubmit.co/ajax/bidhankumar331@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:$('#n').value,email:$('#e').value,_replyto:$('#e').value,_subject:'Portfolio: '+$('#s').value,message:$('#m').value,_template:'table'})});
+const j=await r.json();if(!r.ok||j.success==='false')throw 0;f.textContent=bn?'ধন্যবাদ! বার্তা পাঠানো হয়েছে।':'Thanks! Your message was sent.';e.target.reset()}
+catch(x){f.textContent=bn?'সরাসরি পাঠানো যায়নি, ইমেইল অ্যাপ খুলছে…':'Could not send directly, opening your email app…';
+location.href='mailto:bidhankumar331@gmail.com?subject='+encodeURIComponent($('#s').value)+'&body='+encodeURIComponent($('#m').value+'\n\n— '+$('#n').value+' ('+$('#e').value+')')}
+b.disabled=false};
+</script>
+</body>
+</html>
