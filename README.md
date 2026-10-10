@@ -8,6 +8,13 @@ Built with plain HTML, CSS and JavaScript. No framework, no build step, no depen
 
 ---
 
+## 🌌 Pages
+
+- **Home (`index.html`)**: fly through a 3D universe. Each planet is a section: Launch, About, Work, GitHub, Channel, Blog and Contact. Tap a planet to jump to it. The ⚙ button switches graphics between Auto, Light and Max.
+- **Classic portfolio (`classic.html`)**: the original scrolling site with the English / বাংলা switch and slide-out menu.
+- **3D office (`office.html`)**: a neon tech-office walk-through.
+- **Blog (`blog.html`)**: BKP Writes.
+
 ## ✨ Features
 
 - **Dark / light theme** that follows the device setting, with a manual toggle
@@ -30,7 +37,9 @@ Built with plain HTML, CSS and JavaScript. No framework, no build step, no depen
 
 ```
 .
-├── index.html          # Main portfolio page (all HTML, CSS, JS in one file)
+├── index.html          # Home page: 3D "cosmic journey" portfolio
+├── classic.html        # Classic scrolling portfolio (opened by the "Classic portfolio" button)
+├── office.html         # 3D tech-office tour (optional extra page)
 ├── blog.html           # "BKP Writes" blog page
 ├── posts.js            # Blog posts (edit this to add posts)
 ├── 404.html            # Custom "page not found" page
@@ -74,20 +83,20 @@ Open `posts.js` and copy one block inside `window.POSTS`:
 `id` becomes the link (`blog.html#/my-post`). Newest posts go first.
 
 ### Add or change a featured app
-In `index.html`, find `<section id="featured">` and copy a `card feat` block. Change the name, description, tech chips and links.
+In `classic.html`, find `<section id="featured">` and copy a `card feat` block. Change the name, description, tech chips and links.
 - **Screenshots** are read from the repo's README. Put plain images in the README, for example `![Home](docs/home.png)`.
 - **Fallback screenshots**: save images as `assets/img/projects/<name>-1.png`, `-2.png`, `-3.png`.
 - **Download APK** links to the repo's latest GitHub Release, so upload an APK there.
 - **Live demo**: add `<a class="btn sm" href="YOUR-URL">Live demo</a>` where the comment in the HTML shows.
 
 ### Update skills
-In `index.html`, find `const S=[['Python',80,'🐍'], ...]`. Each entry is `[name, percent, icon]`. Use `null` instead of a percent to show a *vibe coded* badge.
+In `classic.html`, find `const S=[['Python',80,'🐍'], ...]`. Each entry is `[name, percent, icon]`. Use `null` instead of a percent to show a *vibe coded* badge.
 
 ### Change the CV
 Replace the Google Drive file ID in the two CV links (hero button and CV section). The Drive file must be shared as **Anyone with the link**.
 
 ### Edit Bengali text
-In `index.html`, find the `BN` array. Each entry is `[CSS selector, Bengali text]`.
+In `classic.html`, find the `BN` array. Each entry is `[CSS selector, Bengali text]`.
 
 ### Contact form setup
 The form uses [FormSubmit](https://formsubmit.co) and needs no account. **After deploying, send one test message and click the activation link FormSubmit emails you.** To change where messages go, edit the email address in the `fetch('https://formsubmit.co/ajax/...')` call.
